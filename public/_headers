@@ -1,0 +1,3 @@
+# Zákaz indexovania počas testovania – pred spustením ostrého webu odstrániť
+/*
+  X-Robots-Tag: noindex, nofollow
