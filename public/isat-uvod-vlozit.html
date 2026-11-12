@@ -1,0 +1,391 @@
+<!-- =====================================================================
+     ISAT – úvodná stránka (kód na vloženie do WebSite X5 → objekt „Kód HTML“)
+     Všetky štýly sú obmedzené na .isat-web, takže nerozbijú zvyšok webu.
+     Na výmenu:
+       1) logo:  src="files/isat-logo.png"  → cesta k vášmu logu
+       2) fotka v úvode: --isat-hero-img: url('files/isat-hero.jpg') (riadok nižšie v .isat-web)
+       3) texty v [HRANATÝCH ZÁTVORKÁCH]
+     ===================================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+.isat-web{
+  /* >>> sem dajte cestu k fotke do úvodu (traktor na poli) <<< */
+  --isat-hero-img: url('files/isat-hero.jpg');
+  --navy:#0B2350; --navy-2:#0A3A8C; --blue:#1565D8; --ink:#13213D; --text:#3D4A63;
+  --muted:#5F6B80; --line:#E2E7EF; --bg-soft:#F3F6FA; --white:#FFFFFF;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--ink); background:var(--white); line-height:1.5; -webkit-font-smoothing:antialiased;
+}
+.isat-web *,.isat-web *::before,.isat-web *::after{box-sizing:border-box}
+.isat-web a{color:inherit;text-decoration:none}
+.isat-web img{max-width:100%;display:block}
+.isat-web svg.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.isat-web .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.isat-web .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Hlavička ---------- */
+.isat-web .hdr{background:#fff;position:relative;z-index:20;box-shadow:0 1px 0 var(--line)}
+.isat-web .hdr .wrap{display:flex;align-items:center;gap:28px;min-height:88px}
+.isat-web .logo{display:flex;align-items:center;padding-right:28px;border-right:1px solid var(--line);height:52px}
+.isat-web .logo img{height:52px;width:auto}
+.isat-web .nav{display:flex;align-items:center;gap:6px;flex:1}
+.isat-web .nav>li{list-style:none;position:relative}
+.isat-web .nav ul{margin:0;padding:0}
+.isat-web .nav>li>a{display:flex;align-items:center;gap:4px;padding:12px 14px;font-weight:600;font-size:16px;color:var(--ink);border-radius:8px;white-space:nowrap}
+.isat-web .nav>li>a:hover{color:var(--blue)}
+.isat-web .nav .chev{width:16px;height:16px;stroke-width:2}
+.isat-web .sub{position:absolute;top:100%;left:0;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 40px rgba(11,35,80,.12);padding:8px;display:none}
+.isat-web .nav>li:hover .sub,.isat-web .nav>li:focus-within .sub{display:block}
+.isat-web .sub a{display:block;padding:10px 12px;border-radius:8px;font-size:15px;font-weight:500}
+.isat-web .sub a:hover{background:var(--bg-soft);color:var(--blue)}
+.isat-web .sub small{display:block;color:var(--muted);font-size:13px;font-weight:400}
+.isat-web .hdr-right{display:flex;align-items:center;gap:18px;margin-left:auto}
+.isat-web .icon-btn{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:10px;color:var(--ink)}
+.isat-web .icon-btn:hover{background:var(--bg-soft)}
+.isat-web .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;border-radius:12px;padding:14px 24px;transition:transform .15s,box-shadow .15s,background .15s}
+.isat-web .btn:hover{transform:translateY(-1px)}
+.isat-web .btn-primary{background:var(--navy-2);color:#fff;box-shadow:0 8px 20px rgba(10,58,140,.25)}
+.isat-web .btn-primary:hover{background:#0B4BB0;color:#fff}
+.isat-web .btn-ghost{background:rgba(255,255,255,.7);color:var(--ink);border:1.5px solid var(--ink)}
+.isat-web .btn-ghost:hover{background:#fff}
+.isat-web .menu-toggle{display:none}
+.isat-web .mob-only{display:none}
+.isat-web .burger{display:none}
+
+/* ---------- Úvod (hero) ---------- */
+.isat-web .hero{position:relative;overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.85) 32%,rgba(255,255,255,.25) 55%,rgba(255,255,255,0) 70%),
+    var(--isat-hero-img) center right / cover no-repeat,
+    linear-gradient(180deg,#7FB2E8 0%,#CFE2F5 38%,#F6E2B5 58%,#D9A24A 72%,#A8701F 100%);
+}
+.isat-web .hero .wrap{position:relative;min-height:600px;display:flex;align-items:center;padding-top:72px;padding-bottom:150px}
+.isat-web .hero-text{max-width:640px;position:relative;z-index:2}
+.isat-web .hero h1{margin:0;font-size:clamp(34px,4.6vw,62px);line-height:1.08;font-weight:800;letter-spacing:-.03em;color:var(--navy)}
+.isat-web .hero h1 span{color:var(--blue)}
+.isat-web .accent{width:84px;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--navy-2),#4F97F0);margin:28px 0}
+.isat-web .hero p{margin:0;font-size:clamp(17px,1.5vw,21px);color:var(--text);max-width:600px}
+.isat-web .hero .ctas{display:flex;flex-wrap:wrap;gap:18px;margin-top:40px}
+.isat-web .play{width:24px;height:24px}
+
+/* sklenené dlaždice vpravo */
+.isat-web .tiles{position:absolute;right:24px;top:56px;width:560px;height:420px;z-index:1}
+.isat-web .tile{position:absolute;width:150px;height:118px;border-radius:22px;transform:skewX(-18deg);
+  background:linear-gradient(160deg,rgba(255,255,255,.38),rgba(255,255,255,.08));
+  border:1px solid rgba(255,255,255,.6);box-shadow:0 10px 30px rgba(11,35,80,.15);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center}
+.isat-web .tile svg{transform:skewX(18deg);width:72px;height:72px;stroke:#fff;stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 6px rgba(11,35,80,.25))}
+.isat-web .t1{left:40px;top:150px}
+.isat-web .t2{left:230px;top:60px;height:130px}
+.isat-web .t3{left:400px;top:0}
+.isat-web .t4{left:370px;top:150px}
+.isat-web .t5{left:420px;top:280px;width:130px}
+
+/* pás modulov */
+.isat-web .modules{position:relative;z-index:3;margin-top:-96px}
+.isat-web .modules .wrap{max-width:1440px;padding:0}
+.isat-web .modules .panel{background:#fff;border-radius:40px 40px 0 0;padding:34px 12px 26px;
+  display:grid;grid-template-columns:repeat(8,minmax(0,1fr));box-shadow:0 -10px 30px rgba(11,35,80,.06)}
+.isat-web .mod{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:8px 10px;border-right:1px solid var(--line);border-radius:12px;transition:background .15s}
+.isat-web .mod:last-child{border-right:0}
+.isat-web .mod:hover{background:var(--bg-soft)}
+.isat-web .mod svg{width:46px;height:46px;stroke:var(--navy-2);stroke-width:1.4;margin-bottom:6px}
+.isat-web .mod b{font-size:17px;font-weight:700;color:var(--navy);letter-spacing:-.01em}
+.isat-web .mod span{font-size:14px;color:var(--muted);line-height:1.35}
+
+/* ---------- Ďalšie sekcie ---------- */
+.isat-web section.sec{padding:88px 0}
+.isat-web .eyebrow{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.isat-web h2{margin:10px 0 0;font-size:clamp(28px,3vw,40px);line-height:1.15;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.isat-web .lead{margin:14px 0 0;font-size:18px;color:var(--text);max-width:640px}
+
+.isat-web .why{background:var(--navy);color:#fff}
+.isat-web .why h2{color:#fff}
+.isat-web .why .lead{color:#C9D3E6}
+.isat-web .why .eyebrow{color:#8DB8F5}
+.isat-web .why-grid{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.isat-web .why-grid>div:first-child{flex:1 1 380px}
+.isat-web .stats{flex:1 1 520px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.isat-web .stat{border:1px solid #23407A;border-radius:18px;padding:26px;background:rgba(255,255,255,.03)}
+.isat-web .stat b{display:block;font-size:42px;font-weight:800;letter-spacing:-.02em}
+.isat-web .stat span{color:#C9D3E6;font-size:15px}
+
+.isat-web .two{display:flex;flex-wrap:wrap;gap:48px}
+.isat-web .two>div{flex:1 1 420px;min-width:0}
+.isat-web .ev{display:flex;gap:18px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-top:12px}
+.isat-web .ev .date{width:66px;flex-shrink:0;text-align:center;border-radius:12px;padding:8px 0;background:var(--bg-soft);color:var(--navy)}
+.isat-web .ev .date.on{background:var(--navy-2);color:#fff}
+.isat-web .ev .date b{display:block;font-size:22px;font-weight:800;line-height:1.1}
+.isat-web .ev .date small{font-size:12px;text-transform:uppercase;font-weight:600}
+.isat-web .ev .tx{flex:1;min-width:0}
+.isat-web .ev .tx b{display:block;font-size:16.5px}
+.isat-web .ev .tx span{color:var(--muted);font-size:14.5px}
+.isat-web .ev a.go{font-weight:600;color:var(--blue);white-space:nowrap}
+.isat-web .news a{display:block;padding:18px 0;border-bottom:1px solid var(--line)}
+.isat-web .news a:hover b{color:var(--blue)}
+.isat-web .news a.more{display:inline-flex;border-bottom:0;padding:0}
+.isat-web .news small{color:var(--muted);font-size:13.5px;font-weight:500}
+.isat-web .news b{display:block;font-size:17px;margin-top:4px}
+.isat-web .more{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;color:var(--blue)}
+.isat-web .more svg{width:18px;height:18px}
+
+.isat-web .cta{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 100%);border-radius:28px;padding:52px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between;color:#fff}
+.isat-web .cta h2{color:#fff;margin:0}
+.isat-web .cta p{margin:10px 0 0;color:#D3DDF0;font-size:17px}
+.isat-web .cta .btn-white{background:#fff;color:var(--navy)}
+.isat-web .cta .btn-line{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+
+.isat-web .ftr{background:#071833;color:#B9C4D8;font-size:14.5px}
+.isat-web .ftr .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding:60px 0 36px}
+.isat-web .ftr h4{margin:0 0 14px;color:#fff;font-size:15px}
+.isat-web .ftr a{display:block;padding:4px 0}
+.isat-web .ftr a:hover{color:#fff}
+.isat-web .ftr .bottom{border-top:1px solid #1C2F52;padding:20px 0 28px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:13.5px}
+.isat-web .ftr .bottom div{display:flex;flex-wrap:wrap;gap:6px 20px}
+.isat-web .ftr .bottom a{display:inline}
+
+/* ---------- Tablet a mobil ---------- */
+@media (max-width:1180px){
+  .isat-web .tiles{opacity:.55;right:-80px}
+  .isat-web .modules .panel{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:18px}
+  .isat-web .mod:nth-child(4){border-right:0}
+}
+@media (max-width:980px){
+  .isat-web .burger{display:flex;margin-left:auto}
+  .isat-web .logo{border-right:0;padding-right:0}
+  .isat-web .nav,.isat-web .hdr-right{display:none}
+  .isat-web .menu-toggle:checked ~ .nav{display:flex;flex-direction:column;align-items:stretch;position:absolute;left:0;right:0;top:88px;background:#fff;padding:12px 24px 20px;box-shadow:0 20px 30px rgba(11,35,80,.12)}
+  .isat-web .menu-toggle:checked ~ .nav .mob-only{display:block}
+  .isat-web .sub{position:static;display:block;border:0;box-shadow:none;padding:0 0 0 14px}
+  .isat-web .sub small{display:none}
+  .isat-web .tiles{display:none}
+  .isat-web .hero{background:
+    linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.8) 55%,rgba(255,255,255,.2) 100%),
+    var(--isat-hero-img) center / cover no-repeat,
+    linear-gradient(180deg,#7FB2E8 0%,#CFE2F5 38%,#F6E2B5 58%,#D9A24A 72%,#A8701F 100%)}
+  .isat-web .hero .wrap{min-height:0;padding-top:48px;padding-bottom:130px}
+  .isat-web .ftr .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .isat-web .modules .panel{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:28px 28px 0 0}
+  .isat-web .mod{border-right:0}
+  .isat-web .stats{gap:10px}
+  .isat-web .stat{padding:18px}
+  .isat-web .stat b{font-size:28px}
+  .isat-web .ev{flex-wrap:wrap}
+  .isat-web .modules .wrap{padding:0}
+  .isat-web .cta{padding:32px}
+  .isat-web .ftr .grid{grid-template-columns:1fr}
+  .isat-web .btn{width:100%;justify-content:center}
+}
+</style>
+
+<div class="isat-web">
+
+  <!-- Ikony (použité nižšie cez <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="isat-i-wheat" viewBox="0 0 24 24"><g transform="rotate(30 12 12)"><path d="M12 23V6"/><path d="M12 6c-1.2-1.4-1.2-3 0-4.5 1.2 1.5 1.2 3.1 0 4.5z"/><path d="M12 10c-2.6 0-4.2-1.4-4.6-4 2.6 0 4.2 1.4 4.6 4zM12 10c2.6 0 4.2-1.4 4.6-4-2.6 0-4.2 1.4-4.6 4z"/><path d="M12 14.5c-2.6 0-4.2-1.4-4.6-4 2.6 0 4.2 1.4 4.6 4zM12 14.5c2.6 0 4.2-1.4 4.6-4-2.6 0-4.2 1.4-4.6 4z"/><path d="M12 19c-2.6 0-4.2-1.4-4.6-4 2.6 0 4.2 1.4 4.6 4zM12 19c2.6 0 4.2-1.4 4.6-4-2.6 0-4.2 1.4-4.6 4z"/></g></symbol>
+    <symbol id="isat-i-map" viewBox="0 0 24 24"><path d="M8.5 9.5 2 12v9l6.5-2.5L15 21l7-2.5v-9L19 10.5"/><path d="M8.5 9.5v9M15 13v8"/><path d="M15 14c2.2-2.6 3.6-4.6 3.6-6.4a3.6 3.6 0 0 0-7.2 0C11.4 9.4 12.8 11.4 15 14z"/><circle cx="15" cy="7.6" r="1.2"/></symbol>
+    <symbol id="isat-i-users" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><path d="M6.5 20c0-3.3 2.5-5.5 5.5-5.5s5.5 2.2 5.5 5.5"/><circle cx="5" cy="9" r="2.2"/><path d="M1.5 18.5c0-2.4 1.6-4 3.8-4.2"/><circle cx="19" cy="9" r="2.2"/><path d="M22.5 18.5c0-2.4-1.6-4-3.8-4.2"/></symbol>
+    <symbol id="isat-i-clip" viewBox="0 0 24 24"><rect x="4.5" y="4" width="15" height="17.5" rx="2"/><path d="M9 4V2.8h6V4"/><path d="m8 10 1.5 1.5L12 9M14 10.5h2.5M8 15.5l1.5 1.5L12 14.5M14 16h2.5"/></symbol>
+    <symbol id="isat-i-store" viewBox="0 0 24 24"><path d="M2.5 21V9.5L12 4l9.5 5.5V21"/><path d="M6.5 21v-9h11v9M6.5 16.5h11M10 16.5V21M14 12v4.5"/></symbol>
+    <symbol id="isat-i-scale" viewBox="0 0 24 24"><path d="M12 3v17M7.5 20.5h9M4.5 6.5h15M12 4.5"/><path d="M4.5 6.5 2 13a2.6 2.6 0 0 0 5 0z"/><path d="M19.5 6.5 17 13a2.6 2.6 0 0 0 5 0z"/></symbol>
+    <symbol id="isat-i-doc" viewBox="0 0 24 24"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z"/><path d="M14 2.5V8h5.5M8 12.5h8M8 16.5h8M8 8.5h3"/></symbol>
+    <symbol id="isat-i-layers" viewBox="0 0 24 24"><path d="m12 2.5 9.5 5-9.5 5-9.5-5z"/><path d="m2.5 12 9.5 5 9.5-5M2.5 16.5l9.5 5 9.5-5"/></symbol>
+    <symbol id="isat-i-laptop" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="11.5" rx="1.5"/><path d="M1.5 19h21M8 12.5v-2M11 12.5v-4M14 12.5V9M17 12.5V7"/></symbol>
+    <symbol id="isat-i-tractor" viewBox="0 0 24 24"><circle cx="7" cy="16.5" r="4"/><circle cx="7" cy="16.5" r="1.3"/><circle cx="18.5" cy="18" r="2.6"/><circle cx="18.5" cy="18" r=".8"/><path d="M3 13V6.5h7.5l1.6 6.5M5 6.5V3.5M11 9.5h5.5l2 4.5M12.2 14h3.5l.8 1.6"/><path d="M14.5 9.5V6.5h2.5v3"/></symbol>
+    <symbol id="isat-i-boxes" viewBox="0 0 24 24"><rect x="2.5" y="12" width="9" height="9" rx="1"/><rect x="12.5" y="12" width="9" height="9" rx="1"/><rect x="7.5" y="3" width="9" height="9" rx="1"/><path d="M5.5 12v2.5M15.5 12v2.5M10.5 3v2.5"/></symbol>
+    <symbol id="isat-i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7"/><path d="m20.5 20.5-5-5"/></symbol>
+    <symbol id="isat-i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2.5" y="13" width="4.5" height="6.5" rx="1.5"/><rect x="17" y="13" width="4.5" height="6.5" rx="1.5"/><path d="M19.5 19.5c0 1.6-2.2 2.5-5.5 2.5"/></symbol>
+    <symbol id="isat-i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="isat-i-arrow" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+    <symbol id="isat-i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  </svg>
+
+  <!-- ===== HLAVIČKA ===== -->
+  <header class="hdr">
+    <div class="wrap">
+      <a class="logo" href="index.php" aria-label="ISAT – úvod">
+        <img src="files/isat-logo.png" alt="ISAT">
+      </a>
+
+      <input type="checkbox" id="isat-menu" class="menu-toggle sr">
+      <label for="isat-menu" class="burger icon-btn" aria-label="Menu">
+        <svg class="ic"><use href="#isat-i-menu"/></svg>
+      </label>
+
+      <ul class="nav" aria-label="Hlavné menu">
+        <li><a href="produkty-a-sluzby.html">Riešenia <svg class="ic chev"><use href="#isat-i-chev"/></svg></a>
+          <div class="sub">
+            <a href="agrocont.html">AgroCont <small>Agronomická evidencia</small></a>
+            <a href="#">MAPY <small>Pôdne bloky a parcely</small></a>
+            <a href="agroholding.html">Dochádzka <small>Evidencia pracovníkov</small></a>
+            <a href="#">Správca-MZ <small>Pracovné výkazy</small></a>
+            <a href="#">Sklad <small>Pohyb zásob</small></a>
+            <a href="#">El.VÁHA <small>Váženie a evidencia</small></a>
+            <a href="isat-podate--a-pre-gsaa.html">Podateľňa GSAA <small>Elektronická komunikácia</small></a>
+            <a href="kataster_net.html">Kataster_NET <small>Pozemky a zmluvy</small></a>
+          </div>
+        </li>
+        <li><a href="#">Služby <svg class="ic chev"><use href="#isat-i-chev"/></svg></a>
+          <div class="sub">
+            <a href="skolenia-a-seminare.html">Školenia a semináre</a>
+            <a href="instalacie.php">Inštalácie</a>
+            <a href="na-stiahnutie.html">Na stiahnutie</a>
+            <a href="vzdialena-podpora.html">Vzdialená podpora</a>
+          </div>
+        </li>
+        <li><a href="#">Cenníky</a></li>
+        <li><a href="#">Videonávody</a></li>
+        <li><a href="#">O nás</a></li>
+        <li><a href="kontakty-1.html">Kontakt</a></li>
+        <li class="mob-only"><a href="vzdialena-podpora.html" style="color:#0A3A8C">Vzdialená podpora</a></li>
+      </ul>
+
+      <div class="hdr-right">
+        <a class="icon-btn" href="zoznam.html" aria-label="Hľadať"><svg class="ic"><use href="#isat-i-search"/></svg></a>
+        <a class="btn btn-primary" href="vzdialena-podpora.html"><svg class="ic"><use href="#isat-i-headset"/></svg>Vzdialená podpora</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== ÚVOD ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1>Jeden informačný systém pre riadenie <span>celej farmy</span></h1>
+        <div class="accent"></div>
+        <p>Komplexné softvérové riešenie pre poľnohospodárske podniky a družstvá. Prepája agroevidenciu, mapy, výrobu, sklady, dochádzku a ďalšie činnosti do jedného systému bez zbytočných duplicít.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="produkty-a-sluzby.html">Naše riešenia <svg class="ic"><use href="#isat-i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="https://www.youtube.com/watch?v=-x0LSDo1cIg" target="_blank" rel="noopener">
+            <svg class="play" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#13213D"/><path d="M10 8l6 4-6 4z" fill="#fff"/></svg>
+            Pozrieť video
+          </a>
+        </div>
+      </div>
+
+      <div class="tiles" aria-hidden="true">
+        <div class="tile t1"><svg><use href="#isat-i-laptop"/></svg></div>
+        <div class="tile t2"><svg><use href="#isat-i-map"/></svg></div>
+        <div class="tile t3"><svg><use href="#isat-i-tractor"/></svg></div>
+        <div class="tile t4"><svg><use href="#isat-i-users"/></svg></div>
+        <div class="tile t5"><svg><use href="#isat-i-boxes"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODULY ===== -->
+  <div class="modules">
+    <div class="wrap">
+      <nav class="panel" aria-label="Moduly systému">
+        <a class="mod" href="agrocont.html"><svg class="ic"><use href="#isat-i-wheat"/></svg><b>AgroCont</b><span>Agronomická evidencia</span></a>
+        <a class="mod" href="#"><svg class="ic"><use href="#isat-i-map"/></svg><b>MAPY</b><span>Pôdne bloky a parcely</span></a>
+        <a class="mod" href="agroholding.html"><svg class="ic"><use href="#isat-i-users"/></svg><b>Dochádzka</b><span>Evidencia pracovníkov</span></a>
+        <a class="mod" href="#"><svg class="ic"><use href="#isat-i-clip"/></svg><b>Správca-MZ</b><span>Pracovné výkazy</span></a>
+        <a class="mod" href="#"><svg class="ic"><use href="#isat-i-store"/></svg><b>Sklad</b><span>Pohyb zásob</span></a>
+        <a class="mod" href="#"><svg class="ic"><use href="#isat-i-scale"/></svg><b>El.VÁHA</b><span>Váženie a evidencia</span></a>
+        <a class="mod" href="isat-podate--a-pre-gsaa.html"><svg class="ic"><use href="#isat-i-doc"/></svg><b>Podateľňa GSAA</b><span>Elektronická komunikácia</span></a>
+        <a class="mod" href="kataster_net.html"><svg class="ic"><use href="#isat-i-layers"/></svg><b>Kataster_NET</b><span>Pozemky a zmluvy</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ===== PREČO ISAT ===== -->
+  <section class="sec why">
+    <div class="wrap why-grid">
+      <div>
+        <div class="eyebrow">Prečo ISAT</div>
+        <h2>Rozumieme softvéru aj poľnohospodárstvu</h2>
+        <p class="lead">Od roku 2005 vyvíjame, inštalujeme a podporujeme softvér výhradne pre poľnohospodársku prvovýrobu. Sme z Nitry a pri vás sme počas celého roka – aj v kampani jednotnej žiadosti.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>2005</b><span>na trhu od roku</span></div>
+        <div class="stat"><b>[POČET]</b><span>podnikov používa naše programy</span></div>
+        <div class="stat"><b>[HA]</b><span>hektárov v evidencii</span></div>
+        <div class="stat"><b>[POČET]</b><span>poradcov po celom Slovensku</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TERMÍNY A AKTUALITY ===== -->
+  <section class="sec">
+    <div class="wrap two">
+      <div>
+        <div class="eyebrow">Školenia a termíny</div>
+        <h2>Najbližšie termíny</h2>
+        <div class="ev"><div class="date on"><b>[DD]</b><small>[MES]</small></div><div class="tx"><b>Školenie ISAT-Podateľňa GSAA</b><span>[MIESTO] · [ČAS]</span></div><a class="go" href="skolenia-a-seminare.html">Prihlásiť sa</a></div>
+        <div class="ev"><div class="date"><b>[DD]</b><small>[MES]</small></div><div class="tx"><b>Termín hlásenia na ÚKSÚP</b><span>Pripomienka pre používateľov AgroCont</span></div><a class="go" href="#">Detail</a></div>
+        <div class="ev"><div class="date"><b>[DD]</b><small>[MES]</small></div><div class="tx"><b>Pastevný denník</b><span>Pripomienka pre chovateľov</span></div><a class="go" href="#">Detail</a></div>
+        <a class="more" href="skolenia-a-seminare.html">Celý kalendár školení <svg class="ic"><use href="#isat-i-arrow"/></svg></a>
+      </div>
+      <div class="news">
+        <div class="eyebrow">Aktuality</div>
+        <h2>Novinky z ISAT</h2>
+        <a href="blog/index.php"><small>[DÁTUM]</small><b>[NADPIS AKTUALITY]</b></a>
+        <a href="blog/index.php"><small>[DÁTUM]</small><b>[NADPIS AKTUALITY]</b></a>
+        <a href="blog/index.php"><small>[DÁTUM]</small><b>[NADPIS AKTUALITY]</b></a>
+        <a class="more" href="blog/index.php">Všetky aktuality <svg class="ic"><use href="#isat-i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VÝZVA NA KONTAKT ===== -->
+  <section class="sec" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>Neviete, ktorý modul potrebujete?</h2>
+          <p>Zavolajte nám – poradca vám systém ukáže priamo na údajoch vášho podniku.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a class="btn btn-white" href="tel:+421911761114">+421 911 761 114</a>
+          <a class="btn btn-line" href="kontakty-1.html">Kontakty na poradcov</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PÄTIČKA ===== -->
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <h4>ISAT, s.r.o.</h4>
+          Radlinského 12, 949 01 Nitra<br>
+          IČO: 35951265 · DIČ: 2022047577<br>
+          IČ DPH: SK2022047577<br><br>
+          <a href="tel:+421911761114">+421 911 761 114</a>
+          <a href="mailto:isat@isat.sk">isat@isat.sk</a>
+        </div>
+        <div>
+          <h4>Riešenia</h4>
+          <a href="agrocont.html">AgroCont</a>
+          <a href="kataster_net.html">Kataster_NET</a>
+          <a href="isat-podate--a-pre-gsaa.html">Podateľňa GSAA</a>
+          <a href="agroholding.html">Dochádzka a výkazy</a>
+        </div>
+        <div>
+          <h4>Podpora</h4>
+          <a href="vzdialena-podpora.html">Vzdialená podpora</a>
+          <a href="na-stiahnutie.html">Na stiahnutie</a>
+          <a href="skolenia-a-seminare.html">Školenia</a>
+          <a href="#">Videonávody</a>
+        </div>
+        <div>
+          <h4>Sledujte nás</h4>
+          <a href="https://www.facebook.com/ISATsro" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.youtube.com/watch?v=-x0LSDo1cIg" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.instagram.com/isat_sro_nitra/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© 2026 ISAT, s.r.o. Všetky práva vyhradené.</span>
+        <div><a href="ochrana-osobnych-udajov.html">Ochrana osobných údajov</a><a href="s-aznosti.html">Sťažnosti</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
