@@ -200,25 +200,32 @@ body{margin:0}
 .isat-web .contact-list a{font-weight:600;color:var(--navy)}
 .isat-web .contact-list a:hover{color:var(--blue)}
 .isat-web .contact-list a.more{margin-top:8px;color:var(--blue);font-size:16px}
-.isat-web .contact-form{padding:32px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 10px 30px rgba(11,35,80,.06)}
+/* formulár „Napíšte nám“ na tmavomodrom podklade */
+.isat-web .contact-form{padding:32px;border-radius:20px;background:var(--navy);color:#fff;box-shadow:0 10px 30px rgba(11,35,80,.15)}
+.isat-web .contact-form h2{color:#fff}
+.isat-web .contact-form :focus-visible{outline-color:#fff}
 .isat-web .field-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}
 .isat-web .field{margin-top:18px}
 .isat-web .field label{display:block;margin-bottom:6px;font-weight:600;font-size:15px}
 .isat-web .field input,.isat-web .field textarea{width:100%;padding:12px 14px;border:1.5px solid #C9D3E6;border-radius:10px;background:#fff;color:var(--ink)}
 .isat-web .field textarea{resize:vertical}
 .isat-web .consent{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-size:15px}
-.isat-web .consent input{width:18px;height:18px;margin:2px 0 0;flex-shrink:0;accent-color:var(--navy-2)}
-.isat-web .consent a{color:var(--blue);text-decoration:underline}
-.isat-web .form-note{margin:10px 0 18px;font-size:14px;color:var(--muted)}
+.isat-web .consent input{width:18px;height:18px;margin:2px 0 0;flex-shrink:0;accent-color:var(--blue)}
+.isat-web .consent a{color:#fff;text-decoration:underline}
+.isat-web .form-note{margin:10px 0 18px;font-size:14px;color:#C9D3E6}
 .isat-web .map{margin-top:24px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
 .isat-web .map iframe{display:block;width:100%;height:320px;border:0}
 /* filter kontaktov podľa hashtagov – prepínače sú skryté, štýlujú sa ich popisky */
 .isat-web .filter{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 0;padding:0;border:0}
 .isat-web .filter legend{width:100%;margin-bottom:10px;padding:0;font-weight:600;color:var(--text)}
 .isat-web .filter input{position:absolute;width:1px;height:1px;opacity:0}
-.isat-web .filter label{padding:8px 16px;border:1.5px solid #C9D3E6;border-radius:999px;background:#fff;color:var(--navy-2);font-weight:600;cursor:pointer}
-.isat-web .filter label:hover{border-color:var(--navy-2)}
-.isat-web .filter input:checked+label{background:var(--navy-2);border-color:var(--navy-2);color:#fff}
+/* farby hashtagov: agroevidencia zelená, kataster červená, programovanie modrá */
+.isat-web .tag-agroevidencia{--tag:#1B6E2E;--tag-bg:#E3F4E6}
+.isat-web .tag-kataster{--tag:#B42318;--tag-bg:#FDE7E5}
+.isat-web .tag-programovanie{--tag:#0A3A8C;--tag-bg:#E8F0FD}
+.isat-web .filter label{padding:8px 16px;border:1.5px solid #C9D3E6;border-radius:999px;background:#fff;color:var(--tag,var(--navy-2));font-weight:600;cursor:pointer}
+.isat-web .filter label:hover{border-color:var(--tag,var(--navy-2))}
+.isat-web .filter input:checked+label{background:var(--tag,var(--navy-2));border-color:var(--tag,var(--navy-2));color:#fff}
 .isat-web .filter input:focus-visible+label{outline:3px solid var(--blue);outline-offset:2px}
 .isat-web .people-wrap:has(#f-agroevidencia:checked) .person:not(.t-agroevidencia),
 .isat-web .people-wrap:has(#f-agroevidencia:checked) .people-group:not(:has(.t-agroevidencia)),
@@ -232,7 +239,7 @@ body{margin:0}
 .isat-web .person b{font-size:17px;color:var(--navy)}
 .isat-web .person span{flex:1;margin-bottom:8px;font-size:15px;color:var(--text)}
 .isat-web .person .tags{margin:2px 0 4px;display:flex;flex-wrap:wrap;gap:6px}
-.isat-web .person .tag{flex:none;margin:0;padding:3px 10px;border-radius:999px;background:#E8F0FD;color:var(--navy-2);font-size:13px;font-weight:600}
+.isat-web .person .tag{flex:none;margin:0;padding:3px 10px;border-radius:999px;background:var(--tag-bg,#E8F0FD);color:var(--tag,var(--navy-2));font-size:13px;font-weight:600}
 .isat-web .person a{display:flex;gap:10px;align-items:center;font-size:15px;font-weight:500;overflow-wrap:anywhere}
 .isat-web .person a:hover{color:var(--blue)}
 .isat-web .person svg.ic{width:18px;height:18px;color:var(--blue)}
