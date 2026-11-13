@@ -422,6 +422,8 @@ body{margin:0}
   .isat-web .ftr .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:980px){
+  /* na tablete menšie odsadenie, aby karty neboli stiesnené */
+  .isat-web{--odsadenie:3rem}
   .isat-web .tiles{display:none}
   .isat-web .hero{background:
     linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.8) 55%,rgba(255,255,255,.2) 100%),
