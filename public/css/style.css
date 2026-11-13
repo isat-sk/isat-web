@@ -167,6 +167,16 @@ body{margin:0}
 .isat-web .logos-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px}
 .isat-web .logos-head .lead{margin-top:10px}
 
+/* ---------- Služby ---------- */
+.isat-web .services{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,460px),1fr));gap:20px;margin:0;padding:0;list-style:none}
+.isat-web .svc{padding:30px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 6px 20px rgba(11,35,80,.05)}
+.isat-web .svc .quick-ic{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:16px;background:#E8F0FD;color:var(--navy-2)}
+.isat-web .svc .quick-ic svg.ic{width:28px;height:28px}
+/* nepárna posledná karta sa roztiahne na celú šírku */
+.isat-web .svc:last-child:nth-child(odd){grid-column:1/-1}
+.isat-web .svc-h{margin:18px 0 0;font-size:22px;line-height:1.25}
+.isat-web .svc p{margin:10px 0 0;font-size:16.5px;color:var(--text)}
+
 /* ---------- Podstránky modulov ---------- */
 .isat-web .page-hero{background:linear-gradient(180deg,var(--bg-soft) 0%,#fff 100%);padding:40px 0 56px;border-bottom:1px solid var(--line)}
 .isat-web .crumbs{font-size:14px;color:var(--muted)}
@@ -302,4 +312,5 @@ body{margin:0}
   .isat-web .ftr .grid{grid-template-columns:1fr}
   .isat-web .btn{width:100%;justify-content:center}
   .isat-web .hdr-right .btn{width:auto}
+  .isat-web .svc{padding:22px}
 }
