@@ -440,7 +440,7 @@ body{margin:0}
   /* na tablete menšie odsadenie, aby karty neboli stiesnené */
   .isat-web{--odsadenie:3rem}
   .isat-web .tiles{display:none}
-  .isat-web .hero-media::after{background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.82) 55%,rgba(255,255,255,.3) 100%)}
+  .isat-web .hero-media::after{background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.9) 65%,rgba(255,255,255,.6) 100%)}
   .isat-web .hero{background:
     linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.8) 55%,rgba(255,255,255,.2) 100%),
     var(--isat-hero-img) center / cover no-repeat,
