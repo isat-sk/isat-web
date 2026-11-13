@@ -38,6 +38,13 @@
 .isat-web .hdr .wrap{display:flex;align-items:center;gap:28px;min-height:88px}
 .isat-web .logo{display:flex;align-items:center;padding-right:28px;border-right:1px solid var(--line);height:52px}
 .isat-web .logo img{height:52px;width:auto}
+/* tmavomodrá lišta s rýchlym kontaktom nad hlavičkou */
+.isat-web .topbar{background:var(--navy);color:#fff;font-size:14px}
+.isat-web .topbar .wrap{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px 28px;min-height:40px}
+.isat-web .topbar a{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:500;padding:4px 0}
+.isat-web .topbar a:hover{text-decoration:underline}
+.isat-web .topbar a:focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:2px}
+.isat-web .topbar svg.ic{width:16px;height:16px}
 .isat-web .nav{display:flex;align-items:center;gap:6px;flex:1}
 .isat-web .nav>li{list-style:none;position:relative}
 .isat-web .nav ul{margin:0;padding:0}
@@ -164,6 +171,8 @@
   .isat-web .burger{display:flex;margin-left:auto}
   .isat-web .logo{border-right:0;padding-right:0}
   .isat-web .nav,.isat-web .hdr-right{display:none}
+  /* mobilné menu sa umiestňuje pod riadok s logom, nie pod kontaktnú lištu */
+  .isat-web .hdr > .wrap{position:relative}
   .isat-web .menu-toggle:checked ~ .nav{display:flex;flex-direction:column;align-items:stretch;position:absolute;left:0;right:0;top:88px;background:#fff;padding:12px 24px 20px;box-shadow:0 20px 30px rgba(11,35,80,.12)}
   .isat-web .menu-toggle:checked ~ .nav .mob-only{display:block}
   .isat-web .sub{position:static;display:block;border:0;box-shadow:none;padding:0 0 0 14px}
@@ -177,6 +186,7 @@
   .isat-web .ftr .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:640px){
+  .isat-web .topbar .wrap{justify-content:center;gap:4px 20px}
   .isat-web .modules .panel{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:28px 28px 0 0}
   .isat-web .mod{border-right:0}
   .isat-web .stats{gap:10px}
@@ -212,10 +222,18 @@
     <symbol id="isat-i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
     <symbol id="isat-i-arrow" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
     <symbol id="isat-i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="isat-i-phone" viewBox="0 0 24 24"><path d="M21.5 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.6 4.2 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.6 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="isat-i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
   </svg>
 
   <!-- ===== HLAVIČKA ===== -->
   <header class="hdr">
+    <div class="topbar">
+      <div class="wrap">
+        <a href="tel:+421911761114"><svg class="ic" aria-hidden="true"><use href="#isat-i-phone"/></svg>+421 911 761 114</a>
+        <a href="mailto:isat@isat.sk"><svg class="ic" aria-hidden="true"><use href="#isat-i-mail"/></svg>isat@isat.sk</a>
+      </div>
+    </div>
     <div class="wrap">
       <a class="logo" href="/" aria-label="ISAT – úvod">
         <img src="img/isat-logo.svg" alt="ISAT" width="181" height="52">
