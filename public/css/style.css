@@ -276,6 +276,11 @@ body{margin:0}
 .isat-web .features{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px;margin:28px 0 0;padding:0;list-style:none}
 .isat-web .features li{display:flex;gap:14px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:16px;font-size:16.5px}
 .isat-web .features svg.ic{color:var(--blue);margin-top:1px}
+/* hlavné funkcie na podstránkach modulov: svetlomodrý panel, biele karty, ikona v kruhu */
+.isat-web .features:not(.training-points){gap:14px;padding:28px;border:1px solid #D5E3F8;border-radius:24px;background:linear-gradient(135deg,#EEF4FE 0%,#F8FBFF 100%)}
+.isat-web .features:not(.training-points) li{align-items:center;padding:20px 22px;border-color:#fff;background:#fff;box-shadow:0 6px 18px rgba(11,35,80,.06);font-size:17px;font-weight:500;color:var(--ink);transition:transform .15s,box-shadow .15s}
+.isat-web .features:not(.training-points) li:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(11,35,80,.1)}
+.isat-web .features:not(.training-points) svg.ic{width:36px;height:36px;padding:8px;margin-top:0;border-radius:50%;background:var(--navy-2);color:#fff;stroke-width:2.6}
 /* dlhšie texty na podstránkach */
 .isat-web .text{max-width:none}
 .isat-web .text p{margin:16px 0 0;font-size:17px;color:var(--text)}
@@ -441,6 +446,8 @@ body{margin:0}
   .isat-web .quick{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:640px){
+  .isat-web .features:not(.training-points){padding:16px;gap:10px}
+  .isat-web .features:not(.training-points) li{padding:16px;font-size:16px}
   /* na mobile by 6rem zabralo príliš veľa miesta */
   .isat-web{--odsadenie:1.5rem}
   .isat-web .topbar .wrap{justify-content:center;gap:4px 20px}
