@@ -33,11 +33,11 @@ body{margin:0}
 .isat-web .topbar a:hover{text-decoration:underline}
 .isat-web .topbar a:focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:2px}
 .isat-web .topbar svg.ic{width:16px;height:16px}
-/* na počítači: logo vľavo, menu v strede obrazovky, tlačidlá vpravo (na užších obrazovkách sa menu mierne posunie, aby sa nič nezalomilo) */
-.isat-web .hdr > .wrap{display:grid;grid-template-columns:minmax(max-content,1fr) auto minmax(max-content,1fr)}
+/* na počítači: logo vľavo, menu a tlačidlo Klientská zóna vpravo */
+.isat-web .hdr > .wrap{display:grid;grid-template-columns:auto 1fr auto}
 .isat-web .hdr-right .btn{white-space:nowrap}
 .isat-web .hdr > .wrap > .logo{justify-self:start}
-.isat-web .nav{display:flex;align-items:center;justify-content:center;gap:6px;margin:0;padding:0}
+.isat-web .nav{display:flex;align-items:center;justify-content:flex-end;gap:6px;margin:0;padding:0}
 .isat-web .nav>li{list-style:none;position:relative}
 .isat-web .nav>li>a{display:flex;align-items:center;gap:4px;padding:12px 14px;font-weight:600;font-size:16px;color:var(--ink);border-radius:8px;white-space:nowrap}
 .isat-web .nav>li>a:hover{color:var(--blue)}
