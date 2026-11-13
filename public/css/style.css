@@ -197,7 +197,6 @@ body{margin:0}
 .isat-web .ftr-top{display:flex;flex-wrap:wrap;gap:40px 64px;justify-content:space-between;align-items:flex-start;padding:72px 0 48px;border-bottom:1px solid #1C2F52}
 .isat-web .ftr-brand{flex:1 1 320px;max-width:460px}
 .isat-web .ftr-brand img{width:420px;max-width:100%;height:auto}
-.isat-web .ftr-brand p{margin:18px 0 0;font-size:17px;color:#D3DDF0}
 .isat-web .newsletter{flex:1 1 420px;max-width:560px}
 .isat-web .newsletter p{margin:8px 0 18px}
 .isat-web .nl-label{display:block;margin-bottom:8px;color:#fff;font-weight:600}
