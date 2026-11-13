@@ -215,6 +215,8 @@ body{margin:0}
 .isat-web .person{display:flex;flex-direction:column;gap:6px;padding:22px;border:1px solid var(--line);border-radius:16px;background:#fff}
 .isat-web .person b{font-size:17px;color:var(--navy)}
 .isat-web .person span{flex:1;margin-bottom:8px;font-size:15px;color:var(--text)}
+.isat-web .person .tags{margin:2px 0 4px;display:flex;flex-wrap:wrap;gap:6px}
+.isat-web .person .tag{flex:none;margin:0;padding:3px 10px;border-radius:999px;background:#E8F0FD;color:var(--navy-2);font-size:13px;font-weight:600}
 .isat-web .person a{display:flex;gap:10px;align-items:center;font-size:15px;font-weight:500;overflow-wrap:anywhere}
 .isat-web .person a:hover{color:var(--blue)}
 .isat-web .person svg.ic{width:18px;height:18px;color:var(--blue)}
