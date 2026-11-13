@@ -191,6 +191,39 @@ body{margin:0}
 .isat-web .prax h2{margin:0;font-size:20px}
 .isat-web .prax p{margin:8px 0 0;font-size:17px;color:var(--text)}
 
+/* ---------- Kontakty ---------- */
+.isat-web .contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:48px 64px;align-items:start}
+.isat-web .contact-grid h2{margin-top:0}
+.isat-web .contact-list{margin:24px 0 0;padding:0;list-style:none;font-size:18px}
+.isat-web .contact-list li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+.isat-web .contact-list svg.ic{color:var(--blue);margin-top:2px}
+.isat-web .contact-list a{font-weight:600;color:var(--navy)}
+.isat-web .contact-list a:hover{color:var(--blue)}
+.isat-web .contact-list a.more{margin-top:8px;color:var(--blue);font-size:16px}
+.isat-web .contact-form{padding:32px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 10px 30px rgba(11,35,80,.06)}
+.isat-web .field-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}
+.isat-web .field{margin-top:18px}
+.isat-web .field label{display:block;margin-bottom:6px;font-weight:600;font-size:15px}
+.isat-web .field input,.isat-web .field textarea{width:100%;padding:12px 14px;border:1.5px solid #C9D3E6;border-radius:10px;background:#fff;color:var(--ink)}
+.isat-web .field textarea{resize:vertical}
+.isat-web .consent{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-size:15px}
+.isat-web .consent input{width:18px;height:18px;margin:2px 0 0;flex-shrink:0;accent-color:var(--navy-2)}
+.isat-web .consent a{color:var(--blue);text-decoration:underline}
+.isat-web .form-note{margin:10px 0 18px;font-size:14px;color:var(--muted)}
+.isat-web .people-h{margin:40px 0 0;font-size:22px;color:var(--navy)}
+.isat-web .people{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px;margin:18px 0 0;padding:0;list-style:none}
+.isat-web .person{display:flex;flex-direction:column;gap:6px;padding:22px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.isat-web .person b{font-size:17px;color:var(--navy)}
+.isat-web .person span{flex:1;margin-bottom:8px;font-size:15px;color:var(--text)}
+.isat-web .person a{display:flex;gap:10px;align-items:center;font-size:15px;font-weight:500;overflow-wrap:anywhere}
+.isat-web .person a:hover{color:var(--blue)}
+.isat-web .person svg.ic{width:18px;height:18px;color:var(--blue)}
+.isat-web .companies{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px;margin:24px 0 0;padding:0;list-style:none}
+.isat-web .companies li{padding:24px;border:1px solid var(--line);border-radius:16px}
+.isat-web .companies h3{margin:0 0 10px;font-size:18px;color:var(--navy)}
+.isat-web .companies address,.isat-web .companies p{margin:0;font-style:normal;color:var(--text);line-height:1.7}
+.isat-web .companies p{margin-top:10px}
+
 /* ---------- Pätička ---------- */
 .isat-web .ftr{background:#071833;color:#B9C4D8;font-size:15.5px}
 .isat-web .ftr :focus-visible{outline-color:#fff}
@@ -244,6 +277,7 @@ body{margin:0}
     linear-gradient(180deg,#7FB2E8 0%,#CFE2F5 38%,#F6E2B5 58%,#D9A24A 72%,#A8701F 100%)}
   .isat-web .hero .wrap{min-height:0;padding-top:48px;padding-bottom:130px}
   .isat-web .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .isat-web .contact-grid{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   .isat-web .topbar .wrap{justify-content:center;gap:4px 20px}
@@ -261,6 +295,8 @@ body{margin:0}
   .isat-web .page-ic{width:80px;height:80px;border-radius:18px}
   .isat-web .page-ic svg.ic{width:44px;height:44px}
   .isat-web .ftr-top{padding-top:56px}
+  .isat-web .field-row{grid-template-columns:1fr}
+  .isat-web .contact-form{padding:22px}
   .isat-web .ftr .grid{grid-template-columns:1fr}
   .isat-web .btn{width:100%;justify-content:center}
   .isat-web .hdr-right .btn{width:auto}
