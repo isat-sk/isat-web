@@ -340,6 +340,11 @@ body{margin:0}
 .isat-web .ftr a:hover{color:#fff}
 .isat-web .ftr address{font-style:normal;line-height:1.7;margin-bottom:10px}
 .isat-web .ftr .grid a.ftr-contact{display:flex;align-items:center;gap:10px}
+/* sociálne siete v pätičke: ikona v kruhu + názov */
+.isat-web .ftr .grid a.ftr-social{display:flex;align-items:center;gap:12px;padding:6px 0}
+.isat-web .social-ic{display:flex;align-items:center;justify-content:center;width:40px;height:40px;flex-shrink:0;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;transition:background .15s,border-color .15s}
+.isat-web .social-ic svg.ic{width:20px;height:20px}
+.isat-web .ftr-social:hover .social-ic{background:var(--blue);border-color:var(--blue)}
 .isat-web .ftr-contact svg.ic{width:18px;height:18px}
 .isat-web .ftr-note{font-size:13px;color:#8E9BB5}
 .isat-web .ftr .cols2{columns:2;column-gap:24px}
