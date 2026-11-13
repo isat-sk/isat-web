@@ -177,6 +177,26 @@ body{margin:0}
 .isat-web .svc-h{margin:18px 0 0;font-size:22px;line-height:1.25}
 .isat-web .svc p{margin:10px 0 0;font-size:16.5px;color:var(--text)}
 
+/* školenia: text vľavo, objednávka vpravo */
+.isat-web .training{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:start}
+.isat-web .training h2{margin-top:10px}
+.isat-web .training .text-lead{margin:16px 0 0;font-size:19px;color:var(--ink)}
+.isat-web .training-points{grid-template-columns:1fr;gap:12px}
+.isat-web .training-h{margin:36px 0 0;font-size:19px;color:var(--navy)}
+.isat-web .chips{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0;padding:0;list-style:none}
+.isat-web .chips a{display:inline-block;padding:8px 14px;border:1.5px solid #C9D3E6;border-radius:999px;font-weight:600;font-size:15px;color:var(--navy-2)}
+.isat-web .chips a:hover{border-color:var(--navy-2);background:var(--bg-soft)}
+.isat-web .order{position:sticky;top:24px;padding:32px;border-radius:24px;background:linear-gradient(150deg,var(--navy) 0%,#0E2E66 100%);color:#fff;box-shadow:0 16px 40px rgba(11,35,80,.2)}
+.isat-web .order h2{margin:0;color:#fff;font-size:26px}
+.isat-web .order p{margin:10px 0 20px;color:#D3DDF0}
+.isat-web .order :focus-visible{outline-color:#fff}
+.isat-web .order-line{display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid rgba(255,255,255,.15)}
+.isat-web .order-line .quick-ic{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.1);color:#fff}
+.isat-web .order-line small{display:block;font-size:13px;color:#C9D3E6}
+.isat-web .order-line b{display:block;font-size:18px}
+.isat-web .order-line:hover b{text-decoration:underline}
+.isat-web .order .btn{margin-top:18px;width:100%;justify-content:center}
+
 /* ---------- Podstránky modulov ---------- */
 .isat-web .page-hero{background:linear-gradient(180deg,var(--bg-soft) 0%,#fff 100%);padding:40px 0 56px;border-bottom:1px solid var(--line)}
 .isat-web .crumbs{font-size:14px;color:var(--muted)}
@@ -290,6 +310,8 @@ body{margin:0}
   .isat-web .hero .wrap{min-height:0;padding-top:48px;padding-bottom:130px}
   .isat-web .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
   .isat-web .contact-grid{grid-template-columns:1fr}
+  .isat-web .training{grid-template-columns:1fr}
+  .isat-web .order{position:static}
 }
 @media (max-width:640px){
   .isat-web .topbar .wrap{justify-content:center;gap:4px 20px}
