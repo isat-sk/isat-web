@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Žiadosť o cenovú ponuku | ISAT, s.r.o.</title>
+<meta name="description" content="Vyplňte údaje o podniku, vyberte moduly ISAT-Holding a služby, o ktoré máte záujem, a pošlite nám žiadosť o cenovú ponuku.">
+<!-- Texty v [HRANATÝCH ZÁTVORKÁCH] treba doplniť. Hlavička a pätička sú rovnaké na všetkých stránkach – pri zmene upravte všetky. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="isat-web">
+
+  <!-- ===== HLAVIČKA ===== -->
+  <header class="hdr">
+    <div class="topbar">
+      <div class="wrap">
+        <a href="vzdialena-podpora.html"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-headset"/></svg>Vzdialená podpora</a>
+        <a href="tel:+421911761114"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 114</a>
+        <a href="mailto:isat@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>isat@isat.sk</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <a class="logo" href="/" aria-label="ISAT – úvod">
+        <img src="img/isat-logo.svg" alt="ISAT" width="181" height="52">
+      </a>
+
+      <input type="checkbox" id="isat-menu" class="menu-toggle sr">
+      <label for="isat-menu" class="burger icon-btn" aria-label="Menu">
+        <svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-menu"/></svg>
+      </label>
+
+      <ul class="nav" aria-label="Hlavné menu">
+        <li><a href="isat-holding.html">ISAT-Holding <svg class="ic chev" aria-hidden="true"><use href="img/ikony.svg#isat-i-chev"/></svg></a>
+          <div class="sub sub-wide">
+            <a href="agrocont.html">AgroCont <small>Agronomická evidencia</small></a>
+            <a href="spravca-az.html">Správca-AZ <small>Záznamy z terénu v mobile</small></a>
+            <a href="vykazy-prac.html">Výkazy prác <small>Práca a mechanizácia</small></a>
+            <a href="dochadzka.html">Dochádzka <small>Evidencia pracovného času</small></a>
+            <a href="mapy.html">MAPY <small>Pozemky a práce na mape</small></a>
+            <a href="sklad.html">Sklad <small>Zásoby a skladové pohyby</small></a>
+            <a href="el-vaha.html">El.VÁHA <small>Prenos z mostovej váhy</small></a>
+            <a href="podatelna-gsaa.html">Podateľňa GSAA <small>Podklady k žiadosti o platby</small></a>
+            <a href="kataster-net.html">Kataster_NET <small>Pozemky a nájomné zmluvy</small></a>
+            <a href="ams.html">AMS <small>Fotodokumentácia parciel</small></a>
+            <a href="evidencia-zvierat.html">Evidencia zvierat <small>Stavy a pohyb zvierat</small></a>
+            <a href="isat-holding.html#dalsie">A ďalšie moduly <small>Info-Správca, Obedy, Emisie…</small></a>
+          </div>
+        </li>
+        <li><a href="sluzby.html">Služby <svg class="ic chev" aria-hidden="true"><use href="img/ikony.svg#isat-i-chev"/></svg></a>
+          <div class="sub">
+            <a href="sluzby.html">Odborné služby</a>
+            <a href="skolenia-a-seminare.html">Školenia a semináre</a>
+            <a href="instalacie.php">Inštalácie</a>
+            <a href="na-stiahnutie.html">Na stiahnutie</a>
+            <a href="vzdialena-podpora.html">Vzdialená podpora</a>
+          </div>
+        </li>
+        <li><a href="skolenia-a-seminare.html">Školenia</a></li>
+        <li><a href="#">O nás</a></li>
+        <li><a href="kontakty.html">Kontakt</a></li>
+        <li class="mob-only"><a href="https://spravca.isatplus.sk/Login.aspx">Klientská zóna</a></li>
+      </ul>
+
+      <div class="hdr-right">
+        <a class="btn btn-primary" href="https://spravca.isatplus.sk/Login.aspx"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-user"/></svg>Klientská zóna</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Kde sa nachádzate">
+          <ol>
+            <li><a href="/">Úvod</a></li>
+            <li><span aria-current="page">Žiadosť o cenovú ponuku</span></li>
+          </ol>
+        </nav>
+        <div class="page-hero-in">
+          <div>
+            <div class="eyebrow">Cenová ponuka</div>
+            <h1>Žiadosť o cenovú ponuku</h1>
+            <p class="lead">Vyplňte základné údaje o vašom podniku a označte moduly a služby, o ktoré máte záujem. Pripravíme vám cenovú ponuku na mieru.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec-soft">
+      <div class="wrap quote-grid">
+        <!-- bez JavaScriptu formulár otvorí e-mailový program s vyplnenými údajmi; s JavaScriptom (js/cenova-ponuka.js) je e-mail prehľadnejšie naformátovaný -->
+        <form class="quote-form" id="cenova-ponuka" action="mailto:isat@isat.sk?subject=%C5%BDiados%C5%A5%20o%20cenov%C3%BA%20ponuku" method="post" enctype="text/plain">
+          <fieldset class="quote-part">
+            <legend><span class="step">1</span>Údaje o podniku</legend>
+            <div class="field-row">
+            <div class="field"><label for="p-nazov">Názov podniku <span aria-hidden="true">*</span></label><input type="text" id="p-nazov" name="Názov podniku" autocomplete="organization" required></div>
+            <div class="field"><label for="p-ico">IČO <span aria-hidden="true">*</span></label><input type="text" id="p-ico" name="IČO" required></div>
+            </div>
+            <div class="field-row">
+            <div class="field"><label for="p-dic">DIČ</label><input type="text" id="p-dic" name="DIČ"></div>
+            <div class="field"><label for="p-icdph">IČ DPH</label><input type="text" id="p-icdph" name="IČ DPH"></div>
+            </div>
+            <div class="field"><label for="p-sidlo">Sídlo (ulica, PSČ, obec)</label><input type="text" id="p-sidlo" name="Sídlo (ulica, PSČ, obec)" autocomplete="street-address"></div>
+          </fieldset>
+
+          <fieldset class="quote-part">
+            <legend><span class="step">2</span>Kontaktná osoba</legend>
+            <div class="field-row">
+            <div class="field"><label for="p-meno">Meno a priezvisko <span aria-hidden="true">*</span></label><input type="text" id="p-meno" name="Meno a priezvisko" autocomplete="name" required></div>
+            <div class="field"><label for="p-funkcia">Funkcia</label><input type="text" id="p-funkcia" name="Funkcia" autocomplete="organization-title"></div>
+            </div>
+            <div class="field-row">
+            <div class="field"><label for="p-email">E-mail <span aria-hidden="true">*</span></label><input type="email" id="p-email" name="E-mail" autocomplete="email" required></div>
+            <div class="field"><label for="p-telefon">Telefón <span aria-hidden="true">*</span></label><input type="tel" id="p-telefon" name="Telefón" autocomplete="tel" required></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="quote-part">
+            <legend><span class="step">3</span>Rozsah hospodárenia</legend>
+            <div class="field-row">
+              <div class="field"><label for="p-ku">Počet katastrálnych území</label><input type="number" id="p-ku" name="Počet katastrálnych území" min="0" inputmode="numeric"></div>
+              <div class="field"><label for="p-vymera">Obhospodarovaná výmera (ha)</label><input type="number" id="p-vymera" name="Obhospodarovaná výmera (ha)" min="0" step="any" inputmode="decimal"></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="quote-part">
+            <legend><span class="step">4</span>Moduly ISAT-Holding, o ktoré máte záujem</legend>
+            <div class="check-grid">
+            <label class="check"><input type="checkbox" name="Moduly" value="AgroCont"> <span>AgroCont</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="Správca-AZ"> <span>Správca-AZ</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="Výkazy prác"> <span>Výkazy prác</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="Dochádzka"> <span>Dochádzka</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="MAPY"> <span>MAPY</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="Sklad"> <span>Sklad</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="El.VÁHA"> <span>El.VÁHA</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="Podateľňa GSAA"> <span>Podateľňa GSAA</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="Kataster_NET"> <span>Kataster_NET</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="AMS"> <span>AMS</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="Evidencia zvierat"> <span>Evidencia zvierat</span></label>
+            <label class="check"><input type="checkbox" name="Moduly" value="Ďalšie moduly (Info-Správca, Obedy, Emisie…)"> <span>Ďalšie moduly (Info-Správca, Obedy, Emisie…)</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="quote-part">
+            <legend><span class="step">5</span>Služby, o ktoré máte záujem</legend>
+            <div class="check-grid">
+            <label class="check"><input type="checkbox" name="Služby" value="Spracovanie agronomickej evidencie a hlásení pre ÚKSÚP"> <span>Spracovanie agronomickej evidencie a hlásení pre ÚKSÚP</span></label>
+            <label class="check"><input type="checkbox" name="Služby" value="Vyhotovenie jednotnej žiadosti pre PPA"> <span>Vyhotovenie jednotnej žiadosti pre PPA</span></label>
+            <label class="check"><input type="checkbox" name="Služby" value="Audit nájomných zmlúv a správa evidencie pozemkov"> <span>Audit nájomných zmlúv a správa evidencie pozemkov</span></label>
+            <label class="check"><input type="checkbox" name="Služby" value="Odber pôdnych vzoriek"> <span>Odber pôdnych vzoriek</span></label>
+            <label class="check"><input type="checkbox" name="Služby" value="Tvorba softvérových riešení na mieru"> <span>Tvorba softvérových riešení na mieru</span></label>
+            <label class="check"><input type="checkbox" name="Služby" value="Individuálne školenie"> <span>Individuálne školenie</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="quote-part">
+            <legend><span class="step">6</span>Poznámka</legend>
+            <div class="field"><label for="p-poznamka">Čo by sme mali vedieť? (napr. počet používateľov, termín, súčasný softvér)</label><textarea id="p-poznamka" name="Poznámka" rows="5"></textarea></div>
+          </fieldset>
+
+          <label class="consent"><input type="checkbox" name="Súhlas so spracúvaním osobných údajov" value="áno" required> <span>Súhlasím so <a href="ochrana-osobnych-udajov.html">spracúvaním osobných údajov</a>. <span aria-hidden="true">*</span></span></label>
+          <p class="form-note">Polia označené * sú povinné. Po kliknutí na tlačidlo sa otvorí váš e-mailový program s vyplnenou žiadosťou – stačí ju odoslať.</p>
+          <button class="btn btn-primary" type="submit">Odoslať žiadosť <svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-arrow"/></svg></button>
+          <p class="quote-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="quote-side">
+          <div class="side-card side-body">
+            <h2 class="side-h">Čo bude nasledovať</h2>
+            <ol class="next-steps">
+              <li>Žiadosť si prečítame a prípadne sa vám ozveme s doplňujúcimi otázkami.</li>
+              <li>Pripravíme cenovú ponuku podľa vybraných modulov a služieb.</li>
+              <li>Ak budete chcieť, systém vám bezplatne predstavíme.</li>
+            </ol>
+          </div>
+          <div class="side-card side-body support">
+            <h2 class="side-h">Radšej telefonicky?</h2>
+            <p>Zavolajte nám alebo napíšte – radi vám poradíme, aké moduly sa pre váš podnik hodia.</p>
+            <div class="support-btns">
+              <a class="btn btn-primary" href="tel:+421911761114"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 114</a>
+              <a class="btn btn-ghost" href="mailto:isat@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>isat@isat.sk</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <script src="js/cenova-ponuka.js" defer></script>
+  </main>
+
+  <!-- ===== PÄTIČKA ===== -->
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr-top">
+        <div class="ftr-brand">
+          <img src="img/isat-logo-claim-biele.svg" alt="ISAT – komplexné riešenie informačných systémov a agrotechnológií" width="420" height="69" loading="lazy">
+        </div>
+        <!-- formulár zatiaľ nikam neodosiela – treba ho napojiť na Mailchimp -->
+        <form class="newsletter" action="#" method="post">
+          <h2 class="ftr-h">Odoberajte novinky</h2>
+          <p>Novinky, termíny školení a dôležité termíny priamo do vašej e-mailovej schránky.</p>
+          <label class="nl-label" for="nl-email">Váš e-mail</label>
+          <div class="nl-row">
+            <input type="email" id="nl-email" name="email" autocomplete="email" placeholder="meno@podnik.sk" required>
+            <button class="btn btn-white" type="submit">Prihlásiť sa</button>
+          </div>
+          <label class="nl-consent"><input type="checkbox" name="suhlas" required> <span>Súhlasím so <a href="ochrana-osobnych-udajov.html">spracovaním osobných údajov</a>.</span></label>
+        </form>
+      </div>
+      <div class="grid">
+        <div>
+          <h2 class="ftr-h">ISAT, s.r.o.</h2>
+          <address>
+            Radlinského 12, 949 01 Nitra<br>
+            IČO: 35951265<br>
+            DIČ: 2022047577<br>
+            IČ DPH: SK2022047577
+          </address>
+          <a class="ftr-contact" href="tel:+421911761114"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 114</a>
+          <a class="ftr-contact" href="mailto:isat@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>isat@isat.sk</a>
+        </div>
+        <div>
+          <h2 class="ftr-h">Moduly ISAT-Holding</h2>
+          <div class="cols2">
+            <a href="agrocont.html">AgroCont</a>
+            <a href="spravca-az.html">Správca-AZ</a>
+            <a href="vykazy-prac.html">Výkazy prác</a>
+            <a href="dochadzka.html">Dochádzka</a>
+            <a href="mapy.html">MAPY</a>
+            <a href="sklad.html">Sklad</a>
+            <a href="el-vaha.html">El.VÁHA</a>
+            <a href="podatelna-gsaa.html">Podateľňa GSAA</a>
+            <a href="kataster-net.html">Kataster_NET</a>
+            <a href="ams.html">AMS</a>
+            <a href="evidencia-zvierat.html">Evidencia zvierat</a>
+            <a href="isat-holding.html#dalsie">A ďalšie</a>
+          </div>
+        </div>
+        <div>
+          <h2 class="ftr-h">Podpora</h2>
+          <a href="vzdialena-podpora.html">Vzdialená podpora</a>
+          <a href="na-stiahnutie.html">Na stiahnutie</a>
+          <a href="skolenia-a-seminare.html">Školenia</a>
+          <a class="ftr-contact" href="https://spravca.isatplus.sk/Login.aspx"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-lock"/></svg>Videonávody <span class="ftr-note">(pre klientov)</span></a>
+          <a href="kontakty.html">Kontakty</a>
+        </div>
+        <div>
+          <h2 class="ftr-h">Sledujte nás</h2>
+          <a class="ftr-social" href="https://www.facebook.com/ISATsro" target="_blank" rel="noopener"><span class="social-ic"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-facebook"/></svg></span>Facebook</a>
+          <a class="ftr-social" href="https://www.youtube.com/watch?v=-x0LSDo1cIg" target="_blank" rel="noopener"><span class="social-ic"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-youtube"/></svg></span>YouTube</a>
+          <a class="ftr-social" href="https://www.instagram.com/isat_sro_nitra/" target="_blank" rel="noopener"><span class="social-ic"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-instagram"/></svg></span>Instagram</a>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© 2026 ISAT, s.r.o. Všetky práva vyhradené.</span>
+        <div><a href="ochrana-osobnych-udajov.html">Ochrana osobných údajov</a><a href="s-aznosti.html">Sťažnosti</a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
