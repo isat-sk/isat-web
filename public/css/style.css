@@ -97,6 +97,21 @@ body{margin:0}
 .isat-web .t4{left:370px;top:150px}
 .isat-web .t5{left:420px;top:280px;width:130px}
 
+/* video na pozadí úvodu (cez neho biely prechod, aby bol text čitateľný) */
+.isat-web .hero-s-videom .tiles{display:none}
+.isat-web .hero-media{position:absolute;inset:0;z-index:0;overflow:hidden;background:#C9B79A}
+.isat-web .hero-video{display:block;width:100%;height:100%;object-fit:cover}
+.isat-web .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.9) 42%,rgba(255,255,255,.45) 62%,rgba(255,255,255,0) 80%)}
+.isat-web .hero-s-videom .wrap{z-index:1}
+.isat-web .video-toggle{position:absolute;right:var(--odsadenie);bottom:120px;z-index:2;display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(11,35,80,.55);cursor:pointer}
+.isat-web .video-toggle:hover{background:rgba(11,35,80,.8)}
+.isat-web .video-toggle[hidden]{display:none}
+.isat-web .video-toggle:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.isat-web .ikona-pauza{width:14px;height:16px;border-left:4px solid #fff;border-right:4px solid #fff}
+.isat-web .ikona-play{display:none;width:0;height:0;margin-left:4px;border-top:9px solid transparent;border-bottom:9px solid transparent;border-left:14px solid #fff}
+.isat-web .je-zastavene .ikona-pauza{display:none}
+.isat-web .je-zastavene .ikona-play{display:block}
+
 /* ---------- Moduly ---------- */
 .isat-web .modules{position:relative;z-index:3;margin-top:-96px}
 /* biela karta s modulmi má rovnaké odsadenie (--odsadenie) ako ostatný obsah (.wrap), takže je zarovnaná s textom v hero */
@@ -430,6 +445,7 @@ body{margin:0}
   /* na tablete menšie odsadenie, aby karty neboli stiesnené */
   .isat-web{--odsadenie:3rem}
   .isat-web .tiles{display:none}
+  .isat-web .hero-media::after{background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.9) 65%,rgba(255,255,255,.6) 100%)}
   .isat-web .hero{background:
     linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.8) 55%,rgba(255,255,255,.2) 100%),
     var(--isat-hero-img) center / cover no-repeat,

@@ -73,7 +73,12 @@
 
   <main>
     <!-- ===== ÚVOD ===== -->
-    <section class="hero">
+    <section class="hero hero-s-videom">
+      <!-- video na pozadí: na počítači ho spustí js/uvod-video.js, na mobile a bez JavaScriptu sa zobrazí len úvodný obrázok -->
+      <div class="hero-media" aria-hidden="true">
+        <video class="hero-video" muted loop playsinline preload="none" poster="img/uvod-video.webp" data-src="video/uvod.mp4"></video>
+      </div>
+      <button class="video-toggle" type="button" hidden><span class="ikona-pauza"></span><span class="ikona-play"></span><span class="sr">Zastaviť video</span></button>
       <div class="wrap">
         <div class="hero-text">
           <p class="hero-tag">ISAT-Holding</p>
@@ -95,6 +100,8 @@
         </div>
       </div>
     </section>
+
+    <script src="js/uvod-video.js" defer></script>
 
     <!-- ===== MODULY ===== -->
     <section class="modules" id="moduly" aria-labelledby="moduly-nadpis">
