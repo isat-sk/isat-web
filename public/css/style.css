@@ -7,6 +7,8 @@ body{margin:0}
   --isat-hero-img: none;
   --navy:#0B2350; --navy-2:#0A3A8C; --blue:#1565D8; --ink:#13213D; --text:#3D4A63;
   --muted:#5F6B80; --line:#E2E7EF; --bg-soft:#F3F6FA; --white:#FFFFFF;
+  /* odsadenie obsahu od ľavého a pravého okraja stránky */
+  --odsadenie:6rem;
   font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   color:var(--ink); background:var(--white); line-height:1.5; -webkit-font-smoothing:antialiased;
 }
@@ -15,7 +17,7 @@ body{margin:0}
 .isat-web img{max-width:100%;display:block}
 .isat-web input,.isat-web button{font:inherit}
 .isat-web svg.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.isat-web .wrap{margin:0 auto;padding-left:3rem;padding-right:3rem}
+.isat-web .wrap{margin:0 auto;padding-left:var(--odsadenie);padding-right:var(--odsadenie)}
 .isat-web .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .isat-web :focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px}
 
@@ -83,7 +85,7 @@ body{margin:0}
 .isat-web .ctas{display:flex;flex-wrap:wrap;gap:18px;margin-top:40px}
 
 /* sklenené dlaždice vpravo */
-.isat-web .tiles{position:absolute;right:24px;top:56px;width:560px;height:420px;z-index:1}
+.isat-web .tiles{position:absolute;right:var(--odsadenie);top:56px;width:560px;height:420px;z-index:1}
 .isat-web .tile{position:absolute;width:150px;height:118px;border-radius:22px;transform:skewX(-18deg);
   background:linear-gradient(160deg,rgba(255,255,255,.38),rgba(255,255,255,.08));
   border:1px solid rgba(255,255,255,.6);box-shadow:0 10px 30px rgba(11,35,80,.15);
@@ -97,7 +99,7 @@ body{margin:0}
 
 /* ---------- Moduly ---------- */
 .isat-web .modules{position:relative;z-index:3;margin-top:-96px}
-/* biela karta s modulmi má rovnaké odsadenie 3rem ako ostatný obsah (.wrap), takže je zarovnaná s textom v hero */
+/* biela karta s modulmi má rovnaké odsadenie (--odsadenie) ako ostatný obsah (.wrap), takže je zarovnaná s textom v hero */
 .isat-web .modules .panel{background:#fff;border-radius:40px 40px 0 0;padding:40px 24px 30px;box-shadow:0 -10px 30px rgba(11,35,80,.06)}
 .isat-web .mod-intro{text-align:center;margin:0 auto 28px;padding:0 12px}
 .isat-web .mod-intro h2{font-size:clamp(24px,2.4vw,32px)}
@@ -437,6 +439,8 @@ body{margin:0}
   .isat-web .quick{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:640px){
+  /* na mobile by 6rem zabralo príliš veľa miesta */
+  .isat-web{--odsadenie:1.5rem}
   .isat-web .topbar .wrap{justify-content:center;gap:4px 20px}
   .isat-web .modules .panel{border-radius:28px 28px 0 0;padding:32px 16px 24px}
   .isat-web .mod-grid{--stlpce:2}
