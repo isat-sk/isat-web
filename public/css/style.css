@@ -97,7 +97,7 @@ body{margin:0}
 
 /* ---------- Moduly ---------- */
 .isat-web .modules{position:relative;z-index:3;margin-top:-96px}
-.isat-web .modules .wrap{max-width:1440px;padding:0}
+/* biela karta s modulmi má rovnaké odsadenie 3rem ako ostatný obsah (.wrap), takže je zarovnaná s textom v hero */
 .isat-web .modules .panel{background:#fff;border-radius:40px 40px 0 0;padding:40px 24px 30px;box-shadow:0 -10px 30px rgba(11,35,80,.06)}
 .isat-web .mod-intro{text-align:center;margin:0 auto 28px;padding:0 12px}
 .isat-web .mod-intro h2{font-size:clamp(24px,2.4vw,32px)}
