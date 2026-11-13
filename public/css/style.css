@@ -15,7 +15,7 @@ body{margin:0}
 .isat-web img{max-width:100%;display:block}
 .isat-web input,.isat-web button{font:inherit}
 .isat-web svg.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.isat-web .wrap{max-width:1240px;margin:0 auto;padding-left:3rem;padding-right:3rem}
+.isat-web .wrap{margin:0 auto;padding-left:3rem;padding-right:3rem}
 .isat-web .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .isat-web :focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px}
 
