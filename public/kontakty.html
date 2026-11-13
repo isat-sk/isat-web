@@ -83,23 +83,21 @@
         </nav>
         <div class="page-hero-in">
           <div>
+            <div class="eyebrow">ISAT, s.r.o.</div>
             <h1>Kontakty</h1>
             <p class="lead">Potrebujete s niečím pomôcť? Ak máte akékoľvek otázky, sme tu pre vás.</p>
           </div>
         </div>
+        <ul class="quick">
+          <li><a class="quick-card" href="tel:+421911761114"><span class="quick-ic"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg></span><span><small>Zavolajte nám</small><b>+421 911 761 114</b></span></a></li>
+          <li><a class="quick-card" href="mailto:isat@isat.sk"><span class="quick-ic"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg></span><span><small>Napíšte e-mail</small><b>isat@isat.sk</b></span></a></li>
+          <li><a class="quick-card" href="https://maps.app.goo.gl/kbef6vfV6pc5N4tx8" target="_blank" rel="noopener"><span class="quick-ic"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-map"/></svg></span><span><small>Navštívte nás</small><b>Radlinského 12, Nitra</b><em>1. poschodie, 949 01 Nitra</em></span></a></li>
+        </ul>
       </div>
     </section>
 
     <section class="sec" aria-labelledby="napiste-nadpis">
       <div class="wrap contact-grid">
-        <div>
-          <h2>ISAT, s.r.o.</h2>
-          <ul class="contact-list">
-            <li><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg><a href="tel:+421911761114">+421 911 761 114</a></li>
-            <li><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg><a href="mailto:isat@isat.sk">isat@isat.sk</a></li>
-            <li><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-map"/></svg><span>Radlinského 118/12 (1. poschodie)<br>949 01 Nitra<br><a class="more" href="https://maps.app.goo.gl/kbef6vfV6pc5N4tx8" target="_blank" rel="noopener">Nájsť na mape <svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-arrow"/></svg></a></span></li>
-          </ul>
-        </div>
         <!-- formulár zatiaľ nikam neodosiela – treba ho napojiť na službu na spracovanie formulárov -->
         <form class="contact-form" action="#" method="post">
           <h2 id="napiste-nadpis">Napíšte nám</h2>
@@ -111,48 +109,85 @@
             <div class="field"><label for="k-firma">Firma</label><input type="text" id="k-firma" name="firma" autocomplete="organization"></div>
             <div class="field"><label for="k-tel">Telefón</label><input type="tel" id="k-tel" name="telefon" autocomplete="tel"></div>
           </div>
+          <div class="field"><label for="k-predmet">Predmet správy</label><input type="text" id="k-predmet" name="predmet"></div>
           <div class="field"><label for="k-sprava">Vaša správa <span aria-hidden="true">*</span></label><textarea id="k-sprava" name="sprava" rows="5" required></textarea></div>
           <label class="consent"><input type="checkbox" name="suhlas" required> <span>Súhlasím so <a href="ochrana-osobnych-udajov.html">spracúvaním osobných údajov</a>. <span aria-hidden="true">*</span></span></label>
           <p class="form-note">Polia označené * sú povinné.</p>
-          <button class="btn btn-primary" type="submit">Odoslať správu</button>
+          <button class="btn btn-white" type="submit">Odoslať správu <svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-arrow"/></svg></button>
         </form>
+        <div class="contact-side">
+          <div class="side-card">
+            <div class="map">
+              <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=18.0858%2C48.3098%2C18.0940%2C48.3140&amp;layer=mapnik&amp;marker=48.31188%2C18.08988" title="Mapa – ISAT, s.r.o., Radlinského 12, Nitra" width="600" height="300" loading="lazy"></iframe>
+            </div>
+            <div class="side-body">
+              <h2 class="side-h">Kde nás nájdete</h2>
+              <p>Radlinského 12, 1. poschodie<br>949 01 Nitra</p>
+              <a class="more" href="https://maps.app.goo.gl/kbef6vfV6pc5N4tx8" target="_blank" rel="noopener">Otvoriť v Google Mapách <svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-arrow"/></svg></a>
+            </div>
+          </div>
+          <div class="side-card side-body support">
+            <h2 class="side-h"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-headset"/></svg>Technická podpora</h2>
+            <p>Používate naše programy a potrebujete pomôcť? Pripojíme sa k vášmu počítaču cez vzdialenú podporu.</p>
+            <div class="support-btns">
+              <a class="btn btn-primary" href="vzdialena-podpora.html">Vzdialená podpora</a>
+              <a class="btn btn-ghost" href="https://spravca.isatplus.sk/Login.aspx"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-user"/></svg>Klientská zóna</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="sec sec-soft" aria-labelledby="ludia-nadpis">
-      <div class="wrap">
+      <div class="wrap people-wrap">
         <h2 id="ludia-nadpis">Kontakty na poradcov</h2>
+        <!-- filter funguje bez JavaScriptu (CSS :has); pri novom hashtagu treba doplniť pravidlo do css/style.css -->
+        <fieldset class="filter">
+          <legend>Zobraziť podľa oblasti</legend>
+          <input type="radio" name="oblast" id="f-vsetci" checked><label for="f-vsetci">Všetci</label>
+          <input type="radio" name="oblast" id="f-agroevidencia"><label class="tag-agroevidencia" for="f-agroevidencia">#agroevidencia</label>
+          <input type="radio" name="oblast" id="f-kataster"><label class="tag-kataster" for="f-kataster">#kataster</label>
+          <input type="radio" name="oblast" id="f-programovanie"><label class="tag-programovanie" for="f-programovanie">#programovanie</label>
+        </fieldset>
+        <div class="people-group">
         <h3 class="people-h">Centrála spoločnosti ISAT, s.r.o.</h3>
         <ul class="people">
-          <li class="person"><b>Ing. Andrej Urbanovič, PhD.</b><p class="tags"><span class="tag">#programovanie</span></p><span>Konateľ spoločností ISAT, s.r.o. a ISAT+ s.r.o., hlavný architekt softvéru AgroCont</span><a href="tel:+421911761114"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 114</a><a href="mailto:isat@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>isat@isat.sk</a></li>
-          <li class="person"><b>Ing. Žofia Ballonová</b><span>Office manažér, fakturácie</span><a href="tel:+421911761127"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 127</a><a href="mailto:ballonova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>ballonova@isat.sk</a></li>
-          <li class="person"><b>Ing. Jozef Mikla</b><p class="tags"><span class="tag">#agroevidencia</span></p><span>Riaditeľ spoločnosti ISAT, s.r.o., hlavný odborný a systémový poradca pre softvér AgroCont</span><a href="tel:+421911761117"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 117</a><a href="mailto:mikla@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>mikla@isat.sk</a></li>
-          <li class="person"><b>Ing. Miroslav Mráz, PhD.</b><p class="tags"><span class="tag">#programovanie</span></p><span>Odborný a systémový poradca pre softvér ISAT-Podateľňa pre GSAA, programátor ISAT-Správca</span><a href="tel:+421911761128"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 128</a><a href="mailto:mraz@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>mraz@isat.sk</a></li>
-          <li class="person"><b>PhDr. Anna Šimončíková</b><p class="tags"><span class="tag">#kataster</span></p><span>Odborný poradca pre Kataster_NET a nájomné zmluvy</span><a href="tel:+421908799464"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 908 799 464</a><a href="mailto:simoncikova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>simoncikova@isat.sk</a></li>
-          <li class="person"><b>Ing. Jozef Janáč</b><p class="tags"><span class="tag">#kataster</span></p><span>Odborný a systémový poradca pre AgroCont a Kataster_NET</span><a href="tel:+421911761115"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 115</a><a href="mailto:janac@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>janac@isat.sk</a></li>
-          <li class="person"><b>Vladimír Rokyta</b><p class="tags"><span class="tag">#agroevidencia</span></p><span>Odborný a systémový poradca pre AgroCont, ISAT-Holding</span><a href="tel:+421911761144"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 144</a><a href="mailto:rokyta@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>rokyta@isat.sk</a></li>
-          <li class="person"><b>Ing. Lucia Blahová</b><p class="tags"><span class="tag">#agroevidencia</span></p><span>Odborný a systémový poradca pre AgroCont, evidencia pastvy</span><a href="tel:+421911761116"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 116</a><a href="mailto:blahova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>blahova@isat.sk</a></li>
-          <li class="person"><b>Mgr. Barbora Rokytova (Bačová)</b><span>Odborný a systémový poradca pre AgroCont, evidencia pastvy</span><a href="tel:+421911761118"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 118</a><a href="mailto:rokytova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>rokytova@isat.sk</a></li>
-          <li class="person"><b>Mgr. Tomáš Németh</b><p class="tags"><span class="tag">#agroevidencia</span></p><span>Odborný poradca pre ISAT-Holding a Kataster_NET, východné Slovensko</span><a href="tel:+421911761153"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 153</a><a href="mailto:nemeth@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>nemeth@isat.sk</a></li>
-          <li class="person"><b>Ing. Andrea Sekeráková (Nyitraiová)</b><p class="tags"><span class="tag">#agroevidencia</span></p><span>Odborný a systémový poradca pre AgroCont, evidencia pastvy pre východné Slovensko</span><a href="tel:+421911761143"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 143</a><a href="mailto:nyitraiova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>nyitraiova@isat.sk</a></li>
-          <li class="person"><b>Bc. Martina Urbanovičová</b><p class="tags"><span class="tag">#agroevidencia</span></p><span>Administratíva, spracovanie dokumentácie pre RV</span><a href="tel:+421910611922"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 910 611 922</a><a href="mailto:urbanovicova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>urbanovicova@isat.sk</a></li>
-          <li class="person"><b>Ing. Daniel Kiss</b><p class="tags"><span class="tag">#programovanie</span></p><span>Programátor WEB-Správca</span><a href="tel:+421908761127"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 908 761 127</a><a href="mailto:kiss@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>kiss@isat.sk</a></li>
+          <li class="person t-programovanie tag-programovanie"><div class="person-top"><span class="avatar" aria-hidden="true">AU</span><div><b>Ing. Andrej Urbanovič, PhD.</b><span class="tag">#programovanie</span></div></div><p class="role">Konateľ spoločností ISAT, s.r.o. a ISAT+ s.r.o., hlavný architekt softvéru AgroCont</p><div class="person-links"><a href="tel:+421911761114"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 114</a><a href="mailto:isat@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>isat@isat.sk</a></div></li>
+          <li class="person"><div class="person-top"><span class="avatar" aria-hidden="true">ŽB</span><div><b>Ing. Žofia Ballonová, MBA</b></div></div><p class="role">Office manažér, fakturácie</p><div class="person-links"><a href="tel:+421911761127"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 127</a><a href="mailto:ballonova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>ballonova@isat.sk</a></div></li>
+          <li class="person t-agroevidencia tag-agroevidencia"><div class="person-top"><span class="avatar" aria-hidden="true">JM</span><div><b>Ing. Jozef Mikla</b><span class="tag">#agroevidencia</span></div></div><p class="role">Riaditeľ spoločnosti ISAT, s.r.o., hlavný odborný a systémový poradca pre softvér AgroCont</p><div class="person-links"><a href="tel:+421911761117"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 117</a><a href="mailto:mikla@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>mikla@isat.sk</a></div></li>
+          <li class="person t-programovanie tag-programovanie"><div class="person-top"><span class="avatar" aria-hidden="true">MM</span><div><b>Ing. Miroslav Mráz, PhD.</b><span class="tag">#programovanie</span></div></div><p class="role">Odborný a systémový poradca pre softvér ISAT-Podateľňa pre GSAA, programátor ISAT-Správca</p><div class="person-links"><a href="tel:+421911761128"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 128</a><a href="mailto:mraz@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>mraz@isat.sk</a></div></li>
+          <li class="person t-kataster tag-kataster"><div class="person-top"><span class="avatar" aria-hidden="true">AŠ</span><div><b>PhDr. Anna Šimončíková</b><span class="tag">#kataster</span></div></div><p class="role">Odborný poradca pre Kataster_NET a nájomné zmluvy</p><div class="person-links"><a href="tel:+421908799464"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 908 799 464</a><a href="mailto:simoncikova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>simoncikova@isat.sk</a></div></li>
+          <li class="person t-kataster tag-kataster"><div class="person-top"><span class="avatar" aria-hidden="true">JJ</span><div><b>Ing. Jozef Janáč</b><span class="tag">#kataster</span></div></div><p class="role">Odborný a systémový poradca pre Kataster_NET</p><div class="person-links"><a href="tel:+421911761115"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 115</a><a href="mailto:janac@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>janac@isat.sk</a></div></li>
+          <li class="person t-agroevidencia tag-agroevidencia"><div class="person-top"><span class="avatar" aria-hidden="true">VR</span><div><b>Vladimír Rokyta</b><span class="tag">#agroevidencia</span></div></div><p class="role">Odborný a systémový poradca pre AgroCont, ISAT-Holding</p><div class="person-links"><a href="tel:+421911761144"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 144</a><a href="mailto:rokyta@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>rokyta@isat.sk</a></div></li>
+          <li class="person t-agroevidencia tag-agroevidencia"><div class="person-top"><span class="avatar" aria-hidden="true">LB</span><div><b>Ing. Lucia Blahová</b><span class="tag">#agroevidencia</span></div></div><p class="role">Odborný a systémový poradca pre AgroCont, evidencia pastvy</p><div class="person-links"><a href="tel:+421911761116"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 116</a><a href="mailto:blahova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>blahova@isat.sk</a></div></li>
+          <li class="person"><div class="person-top"><span class="avatar" aria-hidden="true">BR</span><div><b>Mgr. Barbora Rokytova (Bačová)</b></div></div><p class="role">Odborný a systémový poradca pre AgroCont, evidencia pastvy</p><div class="person-links"><a href="tel:+421911761118"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 118</a><a href="mailto:rokytova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>rokytova@isat.sk</a></div></li>
+          <li class="person t-agroevidencia tag-agroevidencia"><div class="person-top"><span class="avatar" aria-hidden="true">TN</span><div><b>Mgr. Tomáš Németh</b><span class="tag">#agroevidencia</span></div></div><p class="role">Odborný poradca pre ISAT-Holding a Kataster_NET, východné Slovensko</p><div class="person-links"><a href="tel:+421911761153"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 153</a><a href="mailto:nemeth@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>nemeth@isat.sk</a></div></li>
+          <li class="person t-agroevidencia tag-agroevidencia"><div class="person-top"><span class="avatar" aria-hidden="true">AS</span><div><b>Ing. Andrea Sekeráková (Nyitraiová)</b><span class="tag">#agroevidencia</span></div></div><p class="role">Odborný a systémový poradca pre AgroCont, evidencia pastvy pre východné Slovensko</p><div class="person-links"><a href="tel:+421911761143"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 911 761 143</a><a href="mailto:nyitraiova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>nyitraiova@isat.sk</a></div></li>
+          <li class="person t-agroevidencia tag-agroevidencia"><div class="person-top"><span class="avatar" aria-hidden="true">MU</span><div><b>Bc. Martina Urbanovičová</b><span class="tag">#agroevidencia</span></div></div><p class="role">Administratíva, spracovanie dokumentácie pre RV</p><div class="person-links"><a href="tel:+421910611922"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 910 611 922</a><a href="mailto:urbanovicova@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>urbanovicova@isat.sk</a></div></li>
+          <li class="person t-programovanie tag-programovanie"><div class="person-top"><span class="avatar" aria-hidden="true">DK</span><div><b>Ing. Daniel Kiss</b><span class="tag">#programovanie</span></div></div><p class="role">Programátor WEB-Správca</p><div class="person-links"><a href="tel:+421908761127"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 908 761 127</a><a href="mailto:kiss@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>kiss@isat.sk</a></div></li>
         </ul>
+        </div>
+        <div class="people-group">
         <h3 class="people-h">ISAT+ s.r.o.</h3>
         <ul class="people">
-          <li class="person"><b>Maroš Tkáč</b><span>Konateľ spoločností ISAT+ s.r.o. a TM-Servis, hlavný vývojový projektant systému Kataster_NET, GPS Kataster a ISAT-Podateľňa</span><a href="tel:+421905325749"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 905 325 749</a><a href="mailto:tmservis@tmservis.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>tmservis@tmservis.sk</a></li>
-          <li class="person"><b>David Tkáč</b><span>Technický administrátor a poradca pre Kataster_NET a nájomné zmluvy</span><a href="tel:+421940838563"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 940 838 563</a><a href="mailto:podpora@tmservis.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>podpora@tmservis.sk</a></li>
+          <li class="person"><div class="person-top"><span class="avatar" aria-hidden="true">MT</span><div><b>Maroš Tkáč</b></div></div><p class="role">Konateľ spoločností ISAT+ s.r.o. a TM-Servis, hlavný vývojový projektant systému Kataster_NET, GPS Kataster a ISAT-Podateľňa</p><div class="person-links"><a href="tel:+421905325749"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 905 325 749</a><a href="mailto:tmservis@tmservis.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>tmservis@tmservis.sk</a></div></li>
+          <li class="person"><div class="person-top"><span class="avatar" aria-hidden="true">DT</span><div><b>David Tkáč</b></div></div><p class="role">Technický administrátor a poradca pre Kataster_NET a nájomné zmluvy</p><div class="person-links"><a href="tel:+421940838563"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 940 838 563</a><a href="mailto:podpora@tmservis.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>podpora@tmservis.sk</a></div></li>
         </ul>
+        </div>
+        <div class="people-group">
         <h3 class="people-h">Externí poradcovia</h3>
         <ul class="people">
-          <li class="person"><b>Mgr. Anton Polák, MBA</b><span>Odborný a systémový poradca pre Kataster_NET a nájomné zmluvy</span><a href="tel:+421905908546"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 905 908 546</a><a href="mailto:polak@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>polak@isat.sk</a></li>
-          <li class="person"><b>Gábor Pónya</b><span>Odborný poradca pre Kataster_NET a nájomné zmluvy</span><a href="tel:+421903135723"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 903 135 723</a><a href="mailto:ponya@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>ponya@isat.sk</a></li>
-          <li class="person"><b>Martin Tureček</b><span>Programátor analytik modulu El.VÁHA</span><a href="tel:+421905625497"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 905 625 497</a><a href="mailto:turecek@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>turecek@isat.sk</a></li>
+          <li class="person"><div class="person-top"><span class="avatar" aria-hidden="true">AP</span><div><b>Mgr. Anton Polák, MBA</b></div></div><p class="role">Odborný a systémový poradca pre Kataster_NET a nájomné zmluvy</p><div class="person-links"><a href="tel:+421905908546"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 905 908 546</a><a href="mailto:polak@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>polak@isat.sk</a></div></li>
+          <li class="person"><div class="person-top"><span class="avatar" aria-hidden="true">GP</span><div><b>Gábor Pónya</b></div></div><p class="role">Odborný poradca pre Kataster_NET a nájomné zmluvy</p><div class="person-links"><a href="tel:+421903135723"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 903 135 723</a><a href="mailto:ponya@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>ponya@isat.sk</a></div></li>
+          <li class="person"><div class="person-top"><span class="avatar" aria-hidden="true">MT</span><div><b>Martin Tureček</b></div></div><p class="role">Programátor analytik modulu El.VÁHA</p><div class="person-links"><a href="tel:+421905625497"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 905 625 497</a><a href="mailto:turecek@isat.sk"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>turecek@isat.sk</a></div></li>
         </ul>
+        </div>
+        <div class="people-group">
         <h3 class="people-h">Právne poradenstvo</h3>
         <ul class="people">
-          <li class="person"><b>JUDr. Boris Štanglovič</b><span>Právne poradenstvo</span><a href="tel:+421917789944"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 917 789 944</a><a href="mailto:judrstanglovic.ml@gmail.com"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>judrstanglovic.ml@gmail.com</a></li>
+          <li class="person"><div class="person-top"><span class="avatar" aria-hidden="true">BŠ</span><div><b>JUDr. Boris Štanglovič</b></div></div><p class="role">Právne poradenstvo</p><div class="person-links"><a href="tel:+421917789944"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-phone"/></svg>+421 917 789 944</a><a href="mailto:judrstanglovic.ml@gmail.com"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-mail"/></svg>judrstanglovic.ml@gmail.com</a></div></li>
         </ul>
+        </div>
       </div>
     </section>
 
@@ -160,9 +195,8 @@
       <div class="wrap">
         <h2 id="firmy-nadpis">Fakturačné údaje</h2>
         <ul class="companies">
-          <li><h3>ISAT, s.r.o.</h3><address>Radlinského 118/12, 1. poschodie<br>949 01 Nitra</address><p>IČO: 35951265<br>DIČ: 2022047577<br>IČ DPH: SK2022047577</p></li>
-          <li><h3>ISATmaps s.r.o.</h3><address>Priemyselná 2<br>949 01 Nitra</address><p>IČO: 46795600<br>DIČ: 2023585058<br>IČ DPH: 2023585058</p></li>
-          <li><h3>ISAT+ s.r.o.</h3><address>Radlinského 118/12, 1. poschodie<br>949 01 Nitra</address><p>IČO: 46644105<br>DIČ: 2023510896<br>IČ DPH: 2023510896</p></li>
+          <li><div class="co-h"><span class="quick-ic"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-doc"/></svg></span><h3>ISAT, s.r.o.</h3></div><dl><dt>Sídlo</dt><dd>Radlinského 12, 949 01 Nitra</dd><dt>IČO</dt><dd>35951265</dd><dt>DIČ</dt><dd>2022047577</dd><dt>IČ DPH</dt><dd>SK2022047577</dd><dt>Zápis</dt><dd>Obchodný register Okresného súdu Nitra, oddiel Sro, vložka č. 17012/N</dd><dt>Konateľ</dt><dd>Ing. Andrej Urbanovič, PhD.</dd></dl></li>
+          <li><div class="co-h"><span class="quick-ic"><svg class="ic" aria-hidden="true"><use href="img/ikony.svg#isat-i-doc"/></svg></span><h3>ISAT+ s.r.o.</h3></div><dl><dt>Sídlo</dt><dd>Radlinského 12, 949 01 Nitra</dd><dt>IČO</dt><dd>46644105</dd><dt>DIČ</dt><dd>2023510896</dd><dt>IČ DPH</dt><dd>SK2023510896</dd><dt>Zápis</dt><dd>Obchodný register Okresného súdu Nitra, oddiel Sro, vložka č. 31480/N</dd><dt>Konatelia</dt><dd>Ing. Andrej Urbanovič, PhD., Maroš Tkáč</dd></dl></li>
         </ul>
       </div>
     </section>
@@ -191,7 +225,7 @@
         <div>
           <h2 class="ftr-h">ISAT, s.r.o.</h2>
           <address>
-            Radlinského 118/12, 949 01 Nitra<br>
+            Radlinského 12, 949 01 Nitra<br>
             IČO: 35951265<br>
             DIČ: 2022047577<br>
             IČ DPH: SK2022047577
