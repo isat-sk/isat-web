@@ -103,7 +103,9 @@ body{margin:0}
 .isat-web .mod-intro h2{font-size:clamp(24px,2.4vw,32px)}
 /* text pod nadpisom na celú šírku zoznamu modulov, zarovnaný na stred */
 .isat-web .mod-intro .lead{max-width:none;margin-left:auto;margin-right:auto}
-.isat-web .mod-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin-top:32px}
+/* moduly v riadkoch po 6 (tablet 4, mobil 2); neúplný posledný riadok je v strede */
+.isat-web .mod-grid{--stlpce:6;display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:32px}
+.isat-web .mod-grid > .mod{flex:0 0 calc((100% - (var(--stlpce) - 1) * 14px) / var(--stlpce));min-width:0}
 .isat-web .mod{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;padding:24px 12px 20px;border:1px solid var(--line);border-radius:20px;background:#fff;transition:transform .15s,box-shadow .15s,border-color .15s}
 .isat-web .mod:hover{transform:translateY(-3px);border-color:#BFD3F2;box-shadow:0 14px 30px rgba(11,35,80,.1)}
 /* ikona v podfarbenom štvorčeku */
@@ -396,7 +398,7 @@ body{margin:0}
 /* ---------- Tablet a mobil ---------- */
 @media (max-width:1180px){
   .isat-web .tiles{opacity:.55;right:-80px}
-  .isat-web .mod-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .isat-web .mod-grid{--stlpce:4}
   /* hlavička: menu sa zbalí do tlačidla, na užšej obrazovke by sa nezmestilo vedľa loga */
   .isat-web .burger{display:flex;margin-left:auto}
   .isat-web .logo{border-right:0;padding-right:0}
@@ -428,7 +430,7 @@ body{margin:0}
 @media (max-width:640px){
   .isat-web .topbar .wrap{justify-content:center;gap:4px 20px}
   .isat-web .modules .panel{border-radius:28px 28px 0 0;padding:32px 16px 24px}
-  .isat-web .mod-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .isat-web .mod-grid{--stlpce:2}
   .isat-web .mod{padding:20px 10px 16px}
   .isat-web .two>div{padding:24px 20px}
   .isat-web section.sec{padding:64px 0}
