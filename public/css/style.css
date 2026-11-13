@@ -1,0 +1,253 @@
+/* Spoločné štýly pre všetky stránky webu ISAT */
+
+/* zrušenie predvoleného okraja prehliadača – hlavička siaha až k okrajom obrazovky */
+body{margin:0}
+.isat-web{
+  /* fotka v úvode: nahraďte none za url('../img/uvod.webp'), keď bude fotka pripravená */
+  --isat-hero-img: none;
+  --navy:#0B2350; --navy-2:#0A3A8C; --blue:#1565D8; --ink:#13213D; --text:#3D4A63;
+  --muted:#5F6B80; --line:#E2E7EF; --bg-soft:#F3F6FA; --white:#FFFFFF;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:var(--ink); background:var(--white); line-height:1.5; -webkit-font-smoothing:antialiased;
+}
+.isat-web *,.isat-web *::before,.isat-web *::after{box-sizing:border-box}
+.isat-web a{color:inherit;text-decoration:none}
+.isat-web img{max-width:100%;display:block}
+.isat-web input,.isat-web button{font:inherit}
+.isat-web svg.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.isat-web .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.isat-web .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.isat-web :focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px}
+
+/* ---------- Hlavička ---------- */
+.isat-web .hdr{background:#fff;position:relative;z-index:20;box-shadow:0 1px 0 var(--line)}
+.isat-web .hdr .wrap{display:flex;align-items:center;gap:28px;min-height:88px}
+.isat-web .logo{display:flex;align-items:center;padding-right:28px;border-right:1px solid var(--line);height:52px}
+.isat-web .logo img{height:52px;width:auto}
+/* tmavomodrá lišta s rýchlym kontaktom nad hlavičkou */
+.isat-web .topbar{background:var(--navy);color:#fff;font-size:14px}
+.isat-web .topbar .wrap{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px 28px;min-height:40px}
+.isat-web .topbar a{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:500;padding:4px 0}
+.isat-web .topbar a:hover{text-decoration:underline}
+.isat-web .topbar a:focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:2px}
+.isat-web .topbar svg.ic{width:16px;height:16px}
+/* na počítači: logo vľavo, menu v strede obrazovky, tlačidlá vpravo (na užších obrazovkách sa menu mierne posunie, aby sa nič nezalomilo) */
+.isat-web .hdr > .wrap{display:grid;grid-template-columns:minmax(max-content,1fr) auto minmax(max-content,1fr)}
+.isat-web .hdr-right .btn{white-space:nowrap}
+.isat-web .hdr > .wrap > .logo{justify-self:start}
+.isat-web .nav{display:flex;align-items:center;justify-content:center;gap:6px;margin:0;padding:0}
+.isat-web .nav>li{list-style:none;position:relative}
+.isat-web .nav>li>a{display:flex;align-items:center;gap:4px;padding:12px 14px;font-weight:600;font-size:16px;color:var(--ink);border-radius:8px;white-space:nowrap}
+.isat-web .nav>li>a:hover{color:var(--blue)}
+.isat-web .nav .chev{width:16px;height:16px;stroke-width:2}
+.isat-web .nav .mob-only a{color:var(--navy-2)}
+.isat-web .sub{position:absolute;top:100%;left:0;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 40px rgba(11,35,80,.12);padding:8px;display:none}
+.isat-web .nav>li:hover .sub,.isat-web .nav>li:focus-within .sub{display:block}
+/* podmenu s modulmi v dvoch stĺpcoch */
+.isat-web .sub-wide{min-width:540px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.isat-web .nav>li:hover .sub-wide,.isat-web .nav>li:focus-within .sub-wide{display:grid}
+.isat-web .sub a{display:block;padding:10px 12px;border-radius:8px;font-size:15px;font-weight:500}
+.isat-web .sub a:hover{background:var(--bg-soft);color:var(--blue)}
+.isat-web .sub small{display:block;color:var(--muted);font-size:13px;font-weight:400}
+.isat-web .hdr-right{display:flex;align-items:center;gap:18px;margin-left:auto}
+.isat-web .icon-btn{width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:10px;color:var(--ink)}
+.isat-web .icon-btn:hover{background:var(--bg-soft)}
+.isat-web .menu-toggle{display:none}
+.isat-web .mob-only{display:none}
+.isat-web .burger{display:none}
+
+/* ---------- Tlačidlá ---------- */
+.isat-web .btn{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;border-radius:12px;padding:14px 24px;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s}
+.isat-web .btn:hover{transform:translateY(-1px)}
+.isat-web .btn-primary{background:var(--navy-2);color:#fff;box-shadow:0 8px 20px rgba(10,58,140,.25)}
+.isat-web .btn-primary:hover{background:#0B4BB0;color:#fff}
+.isat-web .btn-ghost{background:rgba(255,255,255,.7);color:var(--ink);border:1.5px solid var(--ink)}
+.isat-web .btn-ghost:hover{background:#fff}
+.isat-web .btn-white{background:#fff;color:var(--navy)}
+.isat-web .btn-line{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+
+/* ---------- Úvod (hero) ---------- */
+.isat-web .hero{position:relative;overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.85) 32%,rgba(255,255,255,.25) 55%,rgba(255,255,255,0) 70%),
+    var(--isat-hero-img) center right / cover no-repeat,
+    linear-gradient(180deg,#7FB2E8 0%,#CFE2F5 38%,#F6E2B5 58%,#D9A24A 72%,#A8701F 100%);
+}
+.isat-web .hero .wrap{position:relative;min-height:600px;display:flex;align-items:center;padding-top:72px;padding-bottom:150px}
+.isat-web .hero-text{max-width:660px;position:relative;z-index:2}
+.isat-web .hero-tag{display:inline-block;margin:0 0 18px;padding:6px 14px;border-radius:999px;background:var(--navy);color:#fff;font-weight:700;font-size:15px;letter-spacing:.02em}
+.isat-web .hero h1{margin:0;font-size:clamp(34px,4.6vw,62px);line-height:1.08;font-weight:800;letter-spacing:-.03em;color:var(--navy)}
+.isat-web .hero h1 span{color:var(--blue)}
+.isat-web .accent{width:84px;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--navy-2),#4F97F0);margin:28px 0}
+.isat-web .hero p.lead-hero{margin:0;font-size:clamp(17px,1.5vw,21px);color:var(--text);max-width:620px}
+.isat-web .ctas{display:flex;flex-wrap:wrap;gap:18px;margin-top:40px}
+
+/* sklenené dlaždice vpravo */
+.isat-web .tiles{position:absolute;right:24px;top:56px;width:560px;height:420px;z-index:1}
+.isat-web .tile{position:absolute;width:150px;height:118px;border-radius:22px;transform:skewX(-18deg);
+  background:linear-gradient(160deg,rgba(255,255,255,.38),rgba(255,255,255,.08));
+  border:1px solid rgba(255,255,255,.6);box-shadow:0 10px 30px rgba(11,35,80,.15);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center}
+.isat-web .tile svg{transform:skewX(18deg);width:72px;height:72px;stroke:#fff;stroke-width:1.4;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 2px 6px rgba(11,35,80,.25))}
+.isat-web .t1{left:40px;top:150px}
+.isat-web .t2{left:230px;top:60px;height:130px}
+.isat-web .t3{left:400px;top:0}
+.isat-web .t4{left:370px;top:150px}
+.isat-web .t5{left:420px;top:280px;width:130px}
+
+/* ---------- Moduly ---------- */
+.isat-web .modules{position:relative;z-index:3;margin-top:-96px}
+.isat-web .modules .wrap{max-width:1440px;padding:0}
+.isat-web .modules .panel{background:#fff;border-radius:40px 40px 0 0;padding:40px 24px 30px;box-shadow:0 -10px 30px rgba(11,35,80,.06)}
+.isat-web .mod-intro{text-align:center;max-width:760px;margin:0 auto 28px;padding:0 12px}
+.isat-web .mod-intro h2{font-size:clamp(24px,2.4vw,32px)}
+.isat-web .mod-intro .lead{margin-left:auto;margin-right:auto}
+.isat-web .mod-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));row-gap:18px;margin-top:28px}
+.isat-web .mod{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:12px 10px;border-right:1px solid var(--line);border-radius:12px;transition:background .15s}
+.isat-web .mod:nth-child(6n),.isat-web .mod:last-child{border-right:0}
+.isat-web .mod:hover{background:var(--bg-soft)}
+.isat-web .mod svg{width:46px;height:46px;stroke:var(--navy-2);stroke-width:1.4;margin-bottom:6px}
+.isat-web .mod b{font-size:17px;font-weight:700;color:var(--navy);letter-spacing:-.01em}
+.isat-web .mod span{font-size:14px;color:var(--muted);line-height:1.35}
+
+/* ---------- Sekcie ---------- */
+.isat-web section.sec{padding:88px 0}
+.isat-web section.sec-tight{padding-top:0}
+.isat-web .sec-soft{background:var(--bg-soft)}
+.isat-web .eyebrow{font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.isat-web h2{margin:10px 0 0;font-size:clamp(28px,3vw,40px);line-height:1.15;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.isat-web .lead{margin:14px 0 0;font-size:18px;color:var(--text);max-width:640px}
+
+/* Prečo ISAT */
+.isat-web .why{background:var(--navy);color:#fff}
+.isat-web .why h2{color:#fff}
+.isat-web .why .lead{color:#C9D3E6}
+.isat-web .why .eyebrow{color:#8DB8F5}
+.isat-web .why-grid{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.isat-web .why-grid>div:first-child{flex:1 1 380px}
+.isat-web .stats{flex:1 1 560px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.isat-web .stat{border:1px solid #23407A;border-radius:18px;padding:26px;background:rgba(255,255,255,.03)}
+.isat-web .stat b{display:block;font-size:38px;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
+.isat-web .stat span{color:#C9D3E6;font-size:15px}
+
+/* Školenia a aktuality */
+.isat-web .two{display:flex;flex-wrap:wrap;gap:48px}
+.isat-web .two>div{flex:1 1 420px;min-width:0}
+.isat-web .ev{display:flex;gap:18px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-top:12px}
+.isat-web .ev .date{width:66px;flex-shrink:0;text-align:center;border-radius:12px;padding:8px 0;background:var(--bg-soft);color:var(--navy)}
+.isat-web .ev .date.on{background:var(--navy-2);color:#fff}
+.isat-web .ev .date b{display:block;font-size:22px;font-weight:800;line-height:1.1}
+.isat-web .ev .date small{font-size:12px;text-transform:uppercase;font-weight:600}
+.isat-web .ev .tx{flex:1;min-width:0}
+.isat-web .ev .tx b{display:block;font-size:16.5px}
+.isat-web .ev .tx span{color:var(--muted);font-size:14.5px}
+.isat-web .ev a.go{font-weight:600;color:var(--blue);white-space:nowrap}
+.isat-web .news a{display:block;padding:18px 0;border-bottom:1px solid var(--line)}
+.isat-web .news a:hover b{color:var(--blue)}
+.isat-web .news a.more{display:inline-flex;border-bottom:0;padding:0}
+.isat-web .news small{color:var(--muted);font-size:13.5px;font-weight:500}
+.isat-web .news b{display:block;font-size:17px;margin-top:4px}
+.isat-web .more{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;color:var(--blue)}
+.isat-web .more svg{width:18px;height:18px}
+
+/* Výzva na kontakt */
+.isat-web .cta{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 100%);border-radius:28px;padding:52px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between;color:#fff}
+.isat-web .cta h2{color:#fff;margin:0}
+.isat-web .cta p{margin:10px 0 0;color:#D3DDF0;font-size:17px;max-width:560px}
+.isat-web .cta-btns{display:flex;flex-wrap:wrap;gap:12px}
+.isat-web .cta :focus-visible{outline-color:#fff}
+
+/* Logá partnerov a klientov */
+.isat-web .logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:32px 0 0;padding:0;list-style:none}
+.isat-web .logos li{display:flex;align-items:center;justify-content:center;padding:16px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.isat-web .logos img{width:100%;max-width:200px;height:auto}
+.isat-web .logos-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px}
+.isat-web .logos-head .lead{margin-top:10px}
+
+/* ---------- Podstránky modulov ---------- */
+.isat-web .page-hero{background:linear-gradient(180deg,var(--bg-soft) 0%,#fff 100%);padding:40px 0 56px;border-bottom:1px solid var(--line)}
+.isat-web .crumbs{font-size:14px;color:var(--muted)}
+.isat-web .crumbs ol{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.isat-web .crumbs li+li::before{content:"/";margin-right:6px}
+.isat-web .crumbs a{color:var(--blue)}
+.isat-web .crumbs a:hover{text-decoration:underline}
+.isat-web .page-hero-in{display:flex;gap:28px;align-items:center;margin-top:28px}
+.isat-web .page-ic{display:flex;align-items:center;justify-content:center;width:104px;height:104px;flex-shrink:0;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px rgba(11,35,80,.08)}
+.isat-web .page-ic svg.ic{width:56px;height:56px;stroke:var(--navy-2);stroke-width:1.4}
+.isat-web .page-hero h1{margin:6px 0 0;font-size:clamp(32px,4vw,52px);line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.isat-web .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:28px 0 0;padding:0;list-style:none}
+.isat-web .features li{display:flex;gap:14px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:16px;font-size:16.5px}
+.isat-web .features svg.ic{color:var(--blue);margin-top:1px}
+
+/* ---------- Pätička ---------- */
+.isat-web .ftr{background:#071833;color:#B9C4D8;font-size:15.5px}
+.isat-web .ftr :focus-visible{outline-color:#fff}
+.isat-web .ftr-top{display:flex;flex-wrap:wrap;gap:40px 64px;justify-content:space-between;align-items:flex-start;padding:72px 0 48px;border-bottom:1px solid #1C2F52}
+.isat-web .ftr-brand{flex:1 1 320px;max-width:420px}
+.isat-web .ftr-brand img{width:181px;height:auto}
+.isat-web .ftr-brand p{margin:18px 0 0;font-size:17px;color:#D3DDF0}
+.isat-web .newsletter{flex:1 1 420px;max-width:560px}
+.isat-web .newsletter p{margin:8px 0 18px}
+.isat-web .nl-label{display:block;margin-bottom:8px;color:#fff;font-weight:600}
+.isat-web .nl-row{display:flex;flex-wrap:wrap;gap:12px}
+.isat-web .nl-row input{flex:1 1 240px;min-width:0;padding:14px 16px;border-radius:12px;border:1.5px solid #3A527F;background:#0D2347;color:#fff}
+.isat-web .nl-row input::placeholder{color:#8E9BB5}
+.isat-web .nl-consent{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:14px}
+.isat-web .nl-consent input{width:18px;height:18px;margin:2px 0 0;flex-shrink:0;accent-color:var(--blue)}
+.isat-web .nl-consent a{color:#fff;text-decoration:underline}
+.isat-web .ftr-h{margin:0 0 16px;color:#fff;font-size:17px;font-weight:700;letter-spacing:0}
+.isat-web .ftr .grid{display:grid;grid-template-columns:1.2fr 1.6fr 1fr 1fr;gap:40px;padding:56px 0 48px}
+.isat-web .ftr .grid a{display:block;padding:5px 0}
+.isat-web .ftr a:hover{color:#fff}
+.isat-web .ftr address{font-style:normal;line-height:1.7}
+.isat-web .ftr .cols2{columns:2;column-gap:24px}
+.isat-web .ftr .bottom{border-top:1px solid #1C2F52;padding:22px 0 30px;display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;font-size:14px}
+.isat-web .ftr .bottom div{display:flex;flex-wrap:wrap;gap:6px 20px}
+
+/* ---------- Tablet a mobil ---------- */
+@media (max-width:1180px){
+  .isat-web .tiles{opacity:.55;right:-80px}
+  .isat-web .mod-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .isat-web .mod:nth-child(6n){border-right:1px solid var(--line)}
+  .isat-web .mod:nth-child(4n),.isat-web .mod:last-child{border-right:0}
+  /* hlavička: menu sa zbalí do tlačidla, na užšej obrazovke by sa nezmestilo vedľa loga */
+  .isat-web .burger{display:flex;margin-left:auto}
+  .isat-web .logo{border-right:0;padding-right:0}
+  .isat-web .nav,.isat-web .hdr-right{display:none}
+  /* mobilné menu sa umiestňuje pod riadok s logom, nie pod kontaktnú lištu */
+  .isat-web .hdr > .wrap{display:flex;position:relative}
+  .isat-web .menu-toggle:checked ~ .nav{display:flex;flex-direction:column;align-items:stretch;position:absolute;left:0;right:0;top:88px;background:#fff;padding:12px 24px 20px;box-shadow:0 20px 30px rgba(11,35,80,.12);max-height:calc(100vh - 140px);overflow-y:auto}
+  .isat-web .menu-toggle:checked ~ .nav .mob-only{display:block}
+  .isat-web .sub,.isat-web .nav>li:hover .sub-wide,.isat-web .nav>li:focus-within .sub-wide{position:static;display:block;min-width:0;border:0;box-shadow:none;padding:0 0 0 14px}
+  .isat-web .sub small{display:none}
+  .isat-web .ftr .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:980px){
+  .isat-web .tiles{display:none}
+  .isat-web .hero{background:
+    linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.8) 55%,rgba(255,255,255,.2) 100%),
+    var(--isat-hero-img) center / cover no-repeat,
+    linear-gradient(180deg,#7FB2E8 0%,#CFE2F5 38%,#F6E2B5 58%,#D9A24A 72%,#A8701F 100%)}
+  .isat-web .hero .wrap{min-height:0;padding-top:48px;padding-bottom:130px}
+  .isat-web .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .isat-web .topbar .wrap{justify-content:center;gap:4px 20px}
+  .isat-web .modules .panel{border-radius:28px 28px 0 0;padding:32px 16px 24px}
+  .isat-web .mod-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .isat-web .mod,.isat-web .mod:nth-child(6n){border-right:0}
+  .isat-web section.sec{padding:64px 0}
+  .isat-web section.sec-tight{padding-top:0}
+  .isat-web .stats{grid-template-columns:1fr;gap:10px}
+  .isat-web .stat{padding:18px}
+  .isat-web .stat b{font-size:30px}
+  .isat-web .ev{flex-wrap:wrap}
+  .isat-web .cta{padding:32px}
+  .isat-web .page-hero-in{flex-direction:column;align-items:flex-start;gap:18px}
+  .isat-web .page-ic{width:80px;height:80px;border-radius:18px}
+  .isat-web .page-ic svg.ic{width:44px;height:44px}
+  .isat-web .ftr-top{padding-top:56px}
+  .isat-web .ftr .grid{grid-template-columns:1fr}
+  .isat-web .btn{width:100%;justify-content:center}
+  .isat-web .hdr-right .btn{width:auto}
+}
