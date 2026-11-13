@@ -171,22 +171,25 @@ body{margin:0}
 .isat-web .cta-btns{display:flex;flex-wrap:wrap;gap:12px}
 .isat-web .cta :focus-visible{outline-color:#fff}
 /* veľká výzva „Neviete, aké moduly potrebujete?“: text vľavo, kontaktná karta vpravo */
-.isat-web .cta-big{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;padding:56px;background:radial-gradient(circle at 100% 0,rgba(79,151,240,.35) 0,transparent 45%),linear-gradient(130deg,var(--navy) 0%,#0D3278 55%,var(--navy-2) 100%)}
-.isat-web .cta-big::before{content:"";position:absolute;left:-30px;bottom:-50px;width:280px;height:280px;background-image:radial-gradient(rgba(255,255,255,.22) 1.5px,transparent 1.6px);background-size:18px 18px;-webkit-mask-image:radial-gradient(circle,#000 30%,transparent 70%);mask-image:radial-gradient(circle,#000 30%,transparent 70%);pointer-events:none}
-.isat-web .cta-big .eyebrow{color:#8DB8F5}
-.isat-web .cta-big h2{margin-top:10px;font-size:clamp(28px,3.2vw,42px)}
+.isat-web .cta-big{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;padding:56px;color:var(--ink);border:1px solid #D5E3F8;background:radial-gradient(circle at 100% 0,rgba(79,151,240,.16) 0,transparent 45%),linear-gradient(135deg,#EEF4FE 0%,#F8FBFF 55%,#E6EFFC 100%)}
+.isat-web .cta-big::before{content:"";position:absolute;left:-30px;bottom:-50px;width:280px;height:280px;background-image:radial-gradient(rgba(10,58,140,.16) 1.5px,transparent 1.6px);background-size:18px 18px;-webkit-mask-image:radial-gradient(circle,#000 30%,transparent 70%);mask-image:radial-gradient(circle,#000 30%,transparent 70%);pointer-events:none}
+.isat-web .cta-big::after{background:radial-gradient(circle,rgba(21,101,216,.10) 0,transparent 70%)}
+.isat-web .cta-big :focus-visible{outline-color:var(--blue)}
+.isat-web .cta-big .eyebrow{color:var(--blue)}
+.isat-web .cta-big h2{margin-top:10px;font-size:clamp(28px,3.2vw,42px);color:var(--navy)}
+.isat-web .cta-big p{color:var(--text)}
 .isat-web .cta-points{display:grid;gap:12px;margin:24px 0 0;padding:0;list-style:none}
-.isat-web .cta-points li{display:flex;gap:12px;align-items:center;color:#E3EAF7;font-size:17px;font-weight:500}
-.isat-web .cta-points svg.ic{width:26px;height:26px;padding:4px;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;stroke-width:2.4}
-.isat-web .cta-card{padding:28px;border:1px solid rgba(255,255,255,.2);border-radius:22px;background:rgba(255,255,255,.08);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-.isat-web .cta-line{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.isat-web .cta-points li{display:flex;gap:12px;align-items:center;color:var(--ink);font-size:17px;font-weight:500}
+.isat-web .cta-points svg.ic{width:26px;height:26px;padding:4px;border-radius:50%;background:var(--navy-2);color:#fff;stroke-width:2.4}
+.isat-web .cta-card{padding:28px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 14px 34px rgba(11,35,80,.1)}
+.isat-web .cta-line{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
 .isat-web .cta-line:first-child{padding-top:0}
-.isat-web .cta-line .quick-ic{width:48px;height:48px;border-radius:14px;background:rgba(255,255,255,.14);color:#fff}
-.isat-web .cta-line small{display:block;font-size:13px;color:#C9D3E6}
-.isat-web .cta-line b{display:block;font-size:20px;color:#fff}
-.isat-web .cta-line:hover b{text-decoration:underline}
+.isat-web .cta-line .quick-ic{width:48px;height:48px;border-radius:14px;background:#E8F0FD;color:var(--navy-2)}
+.isat-web .cta-line small{display:block;font-size:13px;color:var(--muted)}
+.isat-web .cta-line b{display:block;font-size:20px;color:var(--navy)}
+.isat-web .cta-line:hover b{color:var(--blue)}
 .isat-web .cta-card .btn{width:100%;justify-content:center;margin-top:22px}
-.isat-web .cta-more{display:flex;gap:6px;align-items:center;justify-content:center;margin-top:14px;color:#fff;font-weight:600}
+.isat-web .cta-more{display:flex;gap:6px;align-items:center;justify-content:center;margin-top:14px;color:var(--blue);font-weight:600}
 .isat-web .cta-more svg.ic{width:18px;height:18px}
 .isat-web .cta-more:hover{text-decoration:underline}
 
