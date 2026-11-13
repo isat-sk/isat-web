@@ -308,10 +308,10 @@ body{margin:0}
     var(--isat-hero-img) center / cover no-repeat,
     linear-gradient(180deg,#7FB2E8 0%,#CFE2F5 38%,#F6E2B5 58%,#D9A24A 72%,#A8701F 100%)}
   .isat-web .hero .wrap{min-height:0;padding-top:48px;padding-bottom:130px}
-  .isat-web .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .isat-web .contact-grid{grid-template-columns:1fr}
   .isat-web .training{grid-template-columns:1fr}
   .isat-web .order{position:static}
+  .isat-web .stats{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .isat-web .contact-grid{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   .isat-web .topbar .wrap{justify-content:center;gap:4px 20px}
