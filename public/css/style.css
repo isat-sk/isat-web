@@ -326,7 +326,7 @@ body{margin:0}
 .isat-web .field-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 16px}
 .isat-web .field{margin-top:18px}
 .isat-web .field label{display:block;margin-bottom:6px;font-weight:600;font-size:15px}
-.isat-web .field input,.isat-web .field textarea{width:100%;padding:12px 14px;border:1.5px solid #C9D3E6;border-radius:10px;background:#fff;color:var(--ink)}
+.isat-web .field input,.isat-web .field textarea{width:100%;padding:12px 14px;border:1.5px solid #C9D3E6;border-radius:10px;background:#fff;color:var(--ink);font:inherit}
 .isat-web .field textarea{resize:vertical}
 .isat-web .consent{display:flex;gap:10px;align-items:flex-start;margin-top:18px;font-size:15px}
 .isat-web .consent input{width:18px;height:18px;margin:2px 0 0;flex-shrink:0;accent-color:var(--blue)}
