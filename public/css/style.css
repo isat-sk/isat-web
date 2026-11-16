@@ -213,7 +213,10 @@ body{margin:0}
 .isat-web .cta-more:hover{text-decoration:underline}
 
 /* Logá partnerov a klientov */
-.isat-web .logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:16px;margin:32px 0 0;padding:0;list-style:none}
+/* logá v riadkoch (počítač 6, partneri 4, tablet 4, mobil 2); neúplný posledný riadok je v strede */
+.isat-web .logos{--stlpce:6;display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:32px 0 0;padding:0;list-style:none}
+.isat-web .logos > li{flex:0 0 calc((100% - (var(--stlpce) - 1) * 16px) / var(--stlpce));min-width:0}
+.isat-web .logos-4{--stlpce:4}
 .isat-web .logos li{display:flex;align-items:center;justify-content:center;min-height:112px;padding:18px;border:1px solid var(--line);border-radius:16px;background:#fff}
 .isat-web .logos li > a{display:flex;align-items:center;justify-content:center;width:100%;height:100%}
 .isat-web .logos li{transition:border-color .15s,box-shadow .15s}
@@ -445,6 +448,7 @@ body{margin:0}
   /* na tablete menšie odsadenie, aby karty neboli stiesnené */
   .isat-web{--odsadenie:3rem}
   .isat-web .tiles{display:none}
+  .isat-web .logos{--stlpce:4}
   .isat-web .hero-media::after{background:linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.9) 65%,rgba(255,255,255,.6) 100%)}
   .isat-web .hero{background:
     linear-gradient(180deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.8) 55%,rgba(255,255,255,.2) 100%),
@@ -462,6 +466,7 @@ body{margin:0}
   .isat-web .quick{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:640px){
+  .isat-web .logos,.isat-web .logos-4{--stlpce:2}
   .isat-web .features:not(.training-points){padding:16px;gap:10px}
   .isat-web .features:not(.training-points) li{padding:16px;font-size:16px}
   /* na mobile by 6rem zabralo príliš veľa miesta */
