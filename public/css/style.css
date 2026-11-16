@@ -226,10 +226,23 @@ body{margin:0}
 .isat-web .logos li.logo-dark{background:var(--navy);border-color:var(--navy)}
 /* logo s vlastným čiernym pozadím (napr. KnowSoft) */
 .isat-web .logos li.logo-black{background:#000;border-color:#000}
+/* biele logo SPPK na ich zelenom podklade */
+.isat-web .logos li.logo-green{background:#6D9D0B;border-color:#6D9D0B}
 /* firma bez loga – názov ako text */
 .isat-web .logos li.logo-text span{font-size:20px;font-weight:800;letter-spacing:-.01em;color:var(--muted);text-align:center}
 .isat-web .logos li.logo-text:hover span{color:var(--navy)}
 .isat-web .logos li:hover img{transform:scale(1.04)}
+/* pás log, ktorý sa posúva dookola; zastaví sa pri myši, pri klávesnici aj tlačidlom */
+.isat-web .marquee{margin-top:32px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.isat-web .marquee-track{display:flex;width:max-content;animation:isat-posun 45s linear infinite}
+.isat-web .marquee:hover .marquee-track,.isat-web .marquee:focus-within .marquee-track,.isat-web .marquee.je-zastavene .marquee-track{animation-play-state:paused}
+.isat-web .marquee .logos{flex-wrap:nowrap;justify-content:flex-start;margin:0;padding:4px 16px 4px 0}
+.isat-web .marquee .logos > li{flex:0 0 200px}
+@keyframes isat-posun{to{transform:translateX(-50%)}}
+.isat-web .marquee-stop{display:block;margin:16px auto 0;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--ink);font:inherit;font-size:14px;cursor:pointer}
+.isat-web .marquee-stop[hidden]{display:none}
+.isat-web .marquee-stop:hover{border-color:var(--navy)}
+.isat-web .marquee-stop:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
 .isat-web .logos-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px}
 .isat-web .logos-head .lead{margin-top:10px}
 
@@ -469,6 +482,7 @@ body{margin:0}
 }
 @media (max-width:640px){
   .isat-web .logos,.isat-web .logos-4{--stlpce:2}
+  .isat-web .marquee .logos > li{flex-basis:150px;min-height:96px;padding:14px}
   .isat-web .features:not(.training-points){padding:16px;gap:10px}
   .isat-web .features:not(.training-points) li{padding:16px;font-size:16px}
   /* na mobile by 6rem zabralo príliš veľa miesta */
@@ -508,4 +522,13 @@ body{margin:0}
   .isat-web .services{--stlpce:1}
   .isat-web .svc{padding:22px}
   .isat-web .quote-form{padding:22px 18px}
+}
+/* návštevník nechce pohyb: logá stoja v riadkoch a opakovania sa skryjú */
+@media (prefers-reduced-motion:reduce){
+  .isat-web .marquee{-webkit-mask-image:none;mask-image:none;overflow:visible}
+  .isat-web .marquee-track{animation:none;width:auto;display:block}
+  .isat-web .marquee .logos{flex-wrap:wrap;justify-content:center;padding:0}
+  .isat-web .marquee .logos > li{flex:0 0 calc((100% - (var(--stlpce) - 1) * 16px) / var(--stlpce))}
+  .isat-web .marquee [aria-hidden="true"]{display:none}
+  .isat-web .marquee-stop{display:none}
 }
