@@ -224,6 +224,8 @@ body{margin:0}
 .isat-web .logos img{width:auto;height:auto;max-width:100%;max-height:72px;transition:transform .15s}
 /* biele logo (napr. Slovetra) na tmavomodrom podklade */
 .isat-web .logos li.logo-dark{background:var(--navy);border-color:var(--navy)}
+/* logo s vlastným čiernym pozadím (napr. KnowSoft) */
+.isat-web .logos li.logo-black{background:#000;border-color:#000}
 /* firma bez loga – názov ako text */
 .isat-web .logos li.logo-text span{font-size:20px;font-weight:800;letter-spacing:-.01em;color:var(--muted);text-align:center}
 .isat-web .logos li.logo-text:hover span{color:var(--navy)}
