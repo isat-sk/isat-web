@@ -35,6 +35,10 @@ body{margin:0}
 .isat-web .topbar a:hover{text-decoration:underline}
 .isat-web .topbar a:focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:2px}
 .isat-web .topbar svg.ic{width:16px;height:16px}
+/* prepínač jazyka SK / EN */
+.isat-web .lang{display:flex;align-items:center;gap:4px;margin:0;padding:0 0 0 20px;list-style:none;border-left:1px solid rgba(255,255,255,.3)}
+.isat-web .lang li > span,.isat-web .topbar .lang a{padding:2px 8px;border-radius:6px;font-weight:600;line-height:1.4}
+.isat-web .lang li > span{background:rgba(255,255,255,.18)}
 /* na počítači: logo vľavo, menu a tlačidlo Klientská zóna vpravo */
 .isat-web .hdr > .wrap{display:grid;grid-template-columns:auto 1fr auto}
 .isat-web .hdr-right .btn{white-space:nowrap}
