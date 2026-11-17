@@ -113,6 +113,11 @@ body{margin:0}
 .isat-web .video-toggle:hover{background:rgba(11,35,80,.8)}
 .isat-web .video-toggle[hidden]{display:none}
 .isat-web .video-toggle:focus-visible{outline:3px solid #fff;outline-offset:2px}
+/* ukážka systému vpravo v úvode */
+.isat-web .hero-s-videom .wrap{flex-wrap:wrap;gap:40px 48px}
+.isat-web .hero-s-videom .hero-text{flex:1 1 520px}
+.isat-web .hero-zariadenia{position:relative;z-index:2;flex:1 1 420px;max-width:600px;padding:12px;border-radius:24px;background:#fff;box-shadow:0 20px 50px rgba(11,35,80,.18)}
+.isat-web .zariadenia-video{display:block;width:100%;height:auto;border-radius:16px}
 .isat-web .ikona-pauza{width:14px;height:16px;border-left:4px solid #fff;border-right:4px solid #fff}
 .isat-web .ikona-play{display:none;width:0;height:0;margin-left:4px;border-top:9px solid transparent;border-bottom:9px solid transparent;border-left:14px solid #fff}
 .isat-web .je-zastavene .ikona-pauza{display:none}
