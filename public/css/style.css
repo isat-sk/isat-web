@@ -177,6 +177,18 @@ body{margin:0}
 .isat-web .news a.more:hover{background:none}
 .isat-web .news small{color:var(--muted);font-size:13.5px;font-weight:500}
 .isat-web .news b{display:block;font-size:17px;margin-top:4px}
+/* reklama partnera pod aktualitami (farby podľa loga Agropoistenia) */
+.isat-web .promo{display:flex;flex-wrap:wrap;align-items:center;gap:24px 40px;margin-top:48px;padding:34px;border-radius:24px;background:#033D2E;color:#E4F0EA}
+.isat-web .promo-logo{flex:0 0 auto;display:flex;align-items:center;justify-content:center;padding:18px 24px;border-radius:16px;background:#fff}
+.isat-web .promo-logo img{width:220px;height:auto}
+.isat-web .promo-tx{flex:1 1 380px;min-width:0}
+.isat-web .promo .eyebrow{color:#9FD8BC}
+.isat-web .promo h2{margin:0 0 10px;color:#fff}
+.isat-web .promo p{margin:0;color:#E4F0EA}
+.isat-web .promo-tx a{color:#fff;font-weight:600;text-decoration:underline}
+.isat-web .promo-btn{background:#fff;color:#033D2E}
+.isat-web .promo-btn:hover{background:#E4F0EA}
+.isat-web .promo a:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .isat-web .more{display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-weight:600;color:var(--blue)}
 .isat-web .more svg{width:18px;height:18px}
 
@@ -503,6 +515,8 @@ body{margin:0}
   .isat-web .ev a.go{margin-left:80px}
   .isat-web .cta{padding:32px}
   .isat-web .cta-big{padding:30px 20px}
+  .isat-web .promo{padding:24px 20px}
+  .isat-web .promo-logo img{width:180px}
   .isat-web .cta-card{padding:20px}
   .isat-web .cta-line b{font-size:18px}
   .isat-web .cta-card .btn{padding:14px 12px;font-size:15px;white-space:nowrap}
