@@ -144,6 +144,8 @@ body{margin:0}
 
 /* Prečo ISAT */
 .isat-web .why{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 88% 15%,rgba(21,101,216,.45) 0,transparent 42%),radial-gradient(circle at 5% 100%,rgba(79,151,240,.18) 0,transparent 40%),var(--navy)}
+/* menšia medzera medzi kartou s modulmi a sekciou Prečo ISAT */
+.isat-web section.why{padding-top:56px}
 .isat-web .why h2{color:#fff}
 .isat-web .why .lead{color:#C9D3E6}
 .isat-web .why .eyebrow{color:#8DB8F5}
@@ -505,6 +507,7 @@ body{margin:0}
   .isat-web .mod{padding:20px 10px 16px}
   .isat-web .two>div{padding:24px 20px}
   .isat-web section.sec{padding:64px 0}
+  .isat-web section.why{padding-top:44px}
   .isat-web section.sec-tight{padding-top:0}
   .isat-web .stats{grid-template-columns:1fr;gap:10px}
   .isat-web .stat{padding:18px}
