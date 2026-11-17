@@ -412,7 +412,8 @@ body{margin:0}
 /* karty poradcov */
 .isat-web .people-h{display:flex;align-items:center;gap:14px;margin:44px 0 0;font-size:20px;color:var(--navy)}
 .isat-web .people-h::after{content:"";flex:1;height:1px;background:#D5DEEC}
-.isat-web .people{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:16px;margin:18px 0 0;padding:0;list-style:none}
+/* najviac 3 poradcovia v riadku */
+.isat-web .people{display:grid;grid-template-columns:repeat(auto-fill,minmax(max(min(100%,320px),calc((100% - 32px) / 3)),1fr));gap:16px;margin:18px 0 0;padding:0;list-style:none}
 .isat-web .person{display:flex;flex-direction:column;padding:22px;border:1px solid var(--line);border-radius:18px;background:#fff;transition:transform .15s,box-shadow .15s}
 .isat-web .person:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(11,35,80,.08)}
 .isat-web .person-top{display:flex;gap:14px;align-items:center}
