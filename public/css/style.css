@@ -319,7 +319,9 @@ body{margin:0}
 .isat-web .next-steps li{margin-top:8px}
 
 /* ---------- Podstránky modulov ---------- */
-.isat-web .page-hero{background:linear-gradient(180deg,var(--bg-soft) 0%,#fff 100%);padding:40px 0 56px;border-bottom:1px solid var(--line)}
+/* hlavička podstránok: svetlé pozadie, vpravo jemná fotka poľa, dole modrá linka */
+.isat-web .page-hero{position:relative;padding:40px 0 56px;background:linear-gradient(90deg,#F3F6FB 0%,#F3F6FB 50%,rgba(243,246,251,.85) 64%,rgba(243,246,251,.2) 100%),url(../img/uvod-video.webp) right 30% / cover no-repeat,#F3F6FB}
+.isat-web .page-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--navy-2),#4F97F0 45%,rgba(79,151,240,0))}
 .isat-web .crumbs{font-size:14px;color:var(--muted)}
 .isat-web .crumbs ol{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
 .isat-web .crumbs li+li::before{content:"/";margin-right:6px}
@@ -329,6 +331,7 @@ body{margin:0}
 .isat-web .page-ic{display:flex;align-items:center;justify-content:center;width:104px;height:104px;flex-shrink:0;border-radius:24px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px rgba(11,35,80,.08)}
 .isat-web .page-ic svg.ic{width:56px;height:56px;stroke:var(--navy-2);stroke-width:1.4}
 .isat-web .page-hero h1{margin:6px 0 0;font-size:clamp(32px,4vw,52px);line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
+.isat-web .page-hero .lead{max-width:640px}
 .isat-web .features{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px;margin:28px 0 0;padding:0;list-style:none}
 .isat-web .features li{display:flex;gap:14px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:16px;font-size:16.5px}
 .isat-web .features svg.ic{color:var(--blue);margin-top:1px}
@@ -534,6 +537,7 @@ body{margin:0}
   .isat-web .cta-line b{font-size:18px}
   .isat-web .cta-card .btn{padding:14px 12px;font-size:15px;white-space:nowrap}
   .isat-web .page-hero-in{flex-direction:column;align-items:flex-start;gap:18px}
+  .isat-web .page-hero{background:linear-gradient(180deg,rgba(243,246,251,.96) 0%,rgba(243,246,251,.88) 100%),url(../img/uvod-video.webp) center / cover no-repeat,#F3F6FB}
   .isat-web .page-ic{width:80px;height:80px;border-radius:18px}
   .isat-web .page-ic svg.ic{width:44px;height:44px}
   .isat-web .ftr-top{padding-top:56px}
