@@ -361,6 +361,18 @@ body{margin:0}
 @media (max-width:640px){
   .isat-web .prax-zelena.prax-foto.prax-tmavozelena{background:linear-gradient(180deg,rgba(198,223,187,.95) 0%,rgba(198,223,187,.9) 100%),var(--foto) 50% 60% / cover no-repeat,#C6DFBB}
 }
+/* tmavomodrá sekcia V praxi (Evidencia zvierat) */
+.isat-web .foto-evidencia-zvierat{--foto:url(../img/zvierata-kravy.webp)}
+.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat{background-position:0 0,right 40%}
+.isat-web .prax-zelena.prax-foto.prax-tmavomodra{background:linear-gradient(90deg,rgba(8,36,84,.96) 0%,rgba(8,36,84,.88) 40%,rgba(10,58,140,.62) 100%),var(--foto) center 40% / cover no-repeat,#082454;border-color:#082454}
+.isat-web .prax-zelena.prax-tmavomodra .eyebrow{color:#9CC3FF}
+.isat-web .prax-zelena.prax-tmavomodra h2{color:#fff}
+.isat-web .prax-zelena.prax-tmavomodra .prax-uvod .lead{color:#D6E2F5}
+.isat-web .prax-zelena.prax-tmavomodra .prax-body li{background:rgba(255,255,255,.94);border-color:rgba(255,255,255,.3)}
+.isat-web .prax-zelena.prax-tmavomodra .prax-body svg.ic{color:var(--navy-2)}
+@media (max-width:640px){
+  .isat-web .prax-zelena.prax-foto.prax-tmavomodra{background:linear-gradient(180deg,rgba(8,36,84,.94) 0%,rgba(8,36,84,.9) 100%),var(--foto) 50% 40% / cover no-repeat,#082454}
+}
 
 .isat-web .vyhody-h + .services{margin-top:24px}
 .isat-web .funkcie-ac{justify-content:flex-start}
