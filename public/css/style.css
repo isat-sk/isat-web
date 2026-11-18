@@ -319,8 +319,6 @@ body{margin:0}
 .isat-web .foto-vykazy-prac{--foto:url(../img/vykazy-zber.webp)}
 .isat-web .foto-mapy{--foto:url(../img/mapy-pole.webp)}
 .isat-web .foto-skolenia{--foto:url(../img/skolenia-porada.webp)}
-.isat-web .page-hero.s-fotkou.foto-skolenia{background-size:auto,auto 185%;background-position:0 0,right 40%}
-@media (max-width:640px){.isat-web .page-hero.s-fotkou.foto-skolenia{background-size:auto,cover;background-position:0 0,50% 40%}}
 .isat-web .page-hero.s-fotkou{background:linear-gradient(90deg,#F3F6FB 0%,#F3F6FB 42%,rgba(243,246,251,.75) 58%,rgba(243,246,251,0) 82%),var(--foto) right 62% / cover no-repeat,#F3F6FB}
 .isat-web .prax-zelena.prax-foto{background:linear-gradient(90deg,rgba(236,246,234,.97) 0%,rgba(236,246,234,.9) 40%,rgba(226,241,222,.7) 100%),var(--foto) center 55% / cover no-repeat,#ECF6EA}
 @media (max-width:640px){
@@ -366,8 +364,6 @@ body{margin:0}
 }
 /* tmavomodrá sekcia V praxi (Evidencia zvierat) */
 .isat-web .foto-evidencia-zvierat{--foto:url(../img/zvierata-kravy.webp)}
-.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat{background-size:auto,auto 200%;background-position:0 0,right 52%}
-@media (max-width:640px){.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat{background-size:auto,cover;background-position:0 0,50% 40%}}
 .isat-web .prax-zelena.prax-foto.prax-tmavomodra{background:linear-gradient(90deg,rgba(8,36,84,.96) 0%,rgba(8,36,84,.88) 40%,rgba(10,58,140,.62) 100%),var(--foto) center 40% / cover no-repeat,#082454;border-color:#082454}
 .isat-web .prax-zelena.prax-tmavomodra .eyebrow{color:#9CC3FF}
 .isat-web .prax-zelena.prax-tmavomodra h2{color:#fff}
@@ -474,6 +470,14 @@ body{margin:0}
 .isat-web .page-ic svg.ic{width:56px;height:56px;stroke:var(--navy-2);stroke-width:1.4}
 .isat-web .page-hero h1{margin:6px 0 0;font-size:clamp(32px,4vw,52px);line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--navy)}
 .isat-web .page-hero .lead{max-width:640px}
+/* hlavička s menšou fotkou, ktorá sa na ľavom okraji plynulo stráca do farby (Školenia, Evidencia zvierat) */
+.isat-web .page-hero.s-fotkou.foto-skolenia,.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat{background:#F3F6FB;overflow:hidden}
+.isat-web .page-hero.s-fotkou.foto-skolenia::before,.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat::before{content:"";position:absolute;top:0;right:0;bottom:0;width:min(62%,900px);background:var(--foto) 50% 50% / cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 6%,rgba(0,0,0,.3) 26%,#000 60%);mask-image:linear-gradient(90deg,transparent 0%,transparent 6%,rgba(0,0,0,.3) 26%,#000 60%);pointer-events:none}
+.isat-web .page-hero.s-fotkou.foto-skolenia::before{background-position:50% 42%}
+.isat-web .page-hero.s-fotkou.foto-skolenia > .wrap,.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat > .wrap{position:relative;z-index:1}
+@media (max-width:640px){
+  .isat-web .page-hero.s-fotkou.foto-skolenia::before,.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat::before{width:100%;opacity:.12;-webkit-mask-image:none;mask-image:none}
+}
 .isat-web .features{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px;margin:28px 0 0;padding:0;list-style:none}
 .isat-web .features li{display:flex;gap:14px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:16px;font-size:16.5px}
 .isat-web .features svg.ic{color:var(--blue);margin-top:1px}
