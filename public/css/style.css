@@ -113,6 +113,16 @@ body{margin:0}
 .isat-web .video-toggle:hover{background:rgba(11,35,80,.8)}
 .isat-web .video-toggle[hidden]{display:none}
 .isat-web .video-toggle:focus-visible{outline:3px solid #fff;outline-offset:2px}
+/* ukážka systému vpravo v úvode */
+.isat-web .hero-s-videom .wrap{flex-wrap:wrap;gap:40px 48px}
+.isat-web .hero-s-videom .hero-text{flex:1 1 520px}
+.isat-web .hero-zariadenia{position:relative;z-index:2;flex:1 1 420px;max-width:660px}
+.isat-web .hero-zariadenia::before{content:"";position:absolute;z-index:-1;left:-6%;right:-6%;top:4%;bottom:-8%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.7),rgba(207,226,245,.35) 55%,rgba(255,255,255,0))}
+.isat-web .hero-zariadenia img{display:block;width:100%;height:auto;filter:drop-shadow(0 28px 28px rgba(11,35,80,.35)) drop-shadow(0 6px 8px rgba(11,35,80,.2));animation:isat-vznasanie 7s ease-in-out infinite}
+@keyframes isat-vznasanie{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+/* pohyb sa zastaví tlačidlom pauzy, na mobile a pri vypnutých animáciách nie je */
+.isat-web .hero:has(.video-toggle.je-zastavene) .hero-zariadenia img{animation-play-state:paused}
+@media (max-width:640px),(prefers-reduced-motion:reduce){.isat-web .hero-zariadenia img{animation:none}}
 .isat-web .ikona-pauza{width:14px;height:16px;border-left:4px solid #fff;border-right:4px solid #fff}
 .isat-web .ikona-play{display:none;width:0;height:0;margin-left:4px;border-top:9px solid transparent;border-bottom:9px solid transparent;border-left:14px solid #fff}
 .isat-web .je-zastavene .ikona-pauza{display:none}
