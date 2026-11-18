@@ -468,9 +468,9 @@ body{margin:0}
 @media (max-width:640px){
   .isat-web .page-hero.s-fotkou.foto-skolenia::before,.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat::before{width:100%;opacity:.12;-webkit-mask-image:none;mask-image:none}
 }
-/* predvolená fotka v hlavičke podstránok bez vlastnej fotky (tablet v poli), s jemným prechodom do farby */
+/* predvolená fotka v hlavičke podstránok bez vlastnej fotky (tablet medzi zeleninou), s jemným prechodom do farby */
 .isat-web .page-hero:not(.s-fotkou){background:#F3F6FB;overflow:hidden}
-.isat-web .page-hero:not(.s-fotkou)::before{content:"";position:absolute;top:0;right:0;bottom:0;width:min(62%,900px);background:url(../img/podstranky-tablet.webp) 50% 85% / cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 6%,rgba(0,0,0,.3) 26%,#000 60%);mask-image:linear-gradient(90deg,transparent 0%,transparent 6%,rgba(0,0,0,.3) 26%,#000 60%);pointer-events:none}
+.isat-web .page-hero:not(.s-fotkou)::before{content:"";position:absolute;top:0;right:0;bottom:0;width:min(62%,900px);background:url(../img/podstranky-zelenina.webp) 50% 45% / cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 6%,rgba(0,0,0,.3) 26%,#000 60%);mask-image:linear-gradient(90deg,transparent 0%,transparent 6%,rgba(0,0,0,.3) 26%,#000 60%);pointer-events:none}
 .isat-web .page-hero:not(.s-fotkou) > .wrap{position:relative;z-index:1}
 @media (max-width:640px){
   .isat-web .page-hero:not(.s-fotkou)::before{width:100%;opacity:.12;-webkit-mask-image:none;mask-image:none}
