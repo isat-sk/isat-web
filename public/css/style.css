@@ -390,6 +390,17 @@ body{margin:0}
 .isat-web .svc:has(.viac[open]) .kratko{display:none}
 .isat-web .svc:has(.viac[open]) .viac{display:flex;flex-direction:column-reverse;margin-top:10px}
 .isat-web .svc:has(.viac[open]) .viac summary{align-self:flex-start}
+/* animované ikonky v hlavných funkciách modulov */
+@keyframes isat-ikona{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-4px) rotate(-6deg)}50%{transform:translateY(0) rotate(0)}75%{transform:translateY(-2px) rotate(5deg)}}
+.isat-web .services:has(.viac) .svc .quick-ic{transition:background .25s,color .25s,transform .25s,box-shadow .25s}
+.isat-web .services:has(.viac) .svc .quick-ic svg.ic{animation:isat-ikona 3.2s ease-in-out infinite}
+.isat-web .services:has(.viac) .svc:nth-child(3n+2) .quick-ic svg.ic{animation-delay:.5s}
+.isat-web .services:has(.viac) .svc:nth-child(3n+3) .quick-ic svg.ic{animation-delay:1s}
+.isat-web .services:has(.viac) .svc:hover .quick-ic{background:var(--navy-2);color:#fff;transform:scale(1.08);box-shadow:0 8px 18px rgba(10,58,140,.25)}
+@media (prefers-reduced-motion:reduce){
+  .isat-web .services:has(.viac) .svc .quick-ic svg.ic{animation:none}
+  .isat-web .services:has(.viac) .svc:hover .quick-ic{transform:none}
+}
 
 .isat-web .vyhody-h + .services{margin-top:24px}
 .isat-web .funkcie-ac{justify-content:flex-start}
