@@ -323,6 +323,16 @@ body{margin:0}
   .isat-web .page-hero.s-fotkou{background:linear-gradient(180deg,rgba(243,246,251,.95) 0%,rgba(243,246,251,.86) 100%),var(--foto) 60% 50% / cover no-repeat,#F3F6FB}
   .isat-web .prax-zelena.prax-foto{background:linear-gradient(180deg,rgba(236,246,234,.95) 0%,rgba(236,246,234,.9) 100%),var(--foto) 60% 50% / cover no-repeat,#ECF6EA}
 }
+/* hnedá sekcia V praxi (Výkazy prác) */
+.isat-web .prax-hneda{--foto:url(../img/vykazy-zber.webp)}
+.isat-web .prax-zelena.prax-foto.prax-hneda{background:linear-gradient(90deg,rgba(246,239,229,.97) 0%,rgba(246,239,229,.9) 40%,rgba(238,226,209,.68) 100%),var(--foto) center 60% / cover no-repeat,#F6EFE5;border-color:#E6D7C2}
+.isat-web .prax-hneda .eyebrow{color:#7A4E24}
+.isat-web .prax-hneda .prax-body li{border-color:#E6D7C2}
+.isat-web .prax-hneda .prax-body svg.ic{color:#8B5A2B}
+@media (max-width:640px){
+  .isat-web .prax-zelena.prax-foto.prax-hneda{background:linear-gradient(180deg,rgba(246,239,229,.95) 0%,rgba(246,239,229,.9) 100%),var(--foto) 60% 50% / cover no-repeat,#F6EFE5}
+}
+
 .isat-web .vyhody-h + .services{margin-top:24px}
 .isat-web .funkcie-ac{justify-content:flex-start}
 .isat-web .funkcie-ac .svc-h{font-size:20px}
