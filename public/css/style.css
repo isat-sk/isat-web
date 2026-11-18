@@ -3,6 +3,7 @@
 /* zrušenie predvoleného okraja prehliadača – hlavička siaha až k okrajom obrazovky */
 body{margin:0}
 .isat-web{
+  --horna-lista: 40px;
   /* fotka v úvode: nahraďte none za url('../img/uvod.webp'), keď bude fotka pripravená */
   --isat-hero-img: none;
   --navy:#0B2350; --navy-2:#0A3A8C; --blue:#1565D8; --ink:#13213D; --text:#3D4A63;
@@ -24,13 +25,16 @@ body{margin:0}
 .isat-web :focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:4px}
 
 /* ---------- Hlavička ---------- */
-.isat-web .hdr{background:#fff;position:relative;z-index:20;box-shadow:0 1px 0 var(--line)}
+/* lepkavá hlavička: modrá lišta odroluje, biela lišta s menu zostane navrchu */
+.isat-web .hdr{background:#fff;position:sticky;top:calc(-1 * var(--horna-lista));z-index:50;box-shadow:0 1px 0 var(--line),0 8px 24px rgba(11,35,80,.06)}
+:root{scroll-padding-top:110px}
+@media (max-width:780px){.isat-web{--horna-lista:62px}}
 .isat-web .hdr .wrap{display:flex;align-items:center;gap:28px;min-height:88px}
 .isat-web .logo{display:flex;align-items:center;padding-right:28px;border-right:1px solid var(--line);height:52px}
 .isat-web .logo img{height:52px;width:auto}
 /* tmavomodrá lišta s rýchlym kontaktom nad hlavičkou */
 .isat-web .topbar{background:var(--navy);color:#fff;font-size:14px}
-.isat-web .topbar .wrap{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px 28px;min-height:40px}
+.isat-web .topbar .wrap{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:8px 28px;min-height:var(--horna-lista)}
 .isat-web .topbar a{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font-weight:500;padding:4px 0}
 .isat-web .topbar a:hover{text-decoration:underline}
 .isat-web .topbar a:focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:2px}
@@ -287,6 +291,20 @@ body{margin:0}
 .isat-web .svc .quick-ic svg.ic{width:28px;height:28px}
 .isat-web .svc-h{margin:18px 0 0;font-size:22px;line-height:1.25}
 .isat-web .svc p{margin:10px 0 0;font-size:16.5px;color:var(--text)}
+/* karty na stránkach Vzdialená podpora a Na stiahnutie */
+.isat-web .services-2{--stlpce:2}
+.isat-web .services-2 .svc{display:flex;flex-direction:column;align-items:flex-start}
+.isat-web .kroky{margin:14px 0 0;padding-left:22px;font-size:16.5px;color:var(--text)}
+.isat-web .kroky li{margin-top:8px;padding-left:4px}
+.isat-web .svc-btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:22px}
+.isat-web .pozn{max-width:760px;margin:28px auto 0;text-align:center;color:var(--muted);font-size:15.5px}
+/* text ochrany osobných údajov */
+.isat-web .text.pravne{max-width:820px}
+.isat-web .pravne h2{margin:40px 0 0;font-size:24px}
+.isat-web .pravne h2:first-child{margin-top:0}
+.isat-web .pravne ul{margin:14px 0 0;padding-left:22px;font-size:17px;color:var(--text)}
+.isat-web .pravne li{margin-top:10px}
+.isat-web .pravne a{color:var(--blue);text-decoration:underline}
 
 /* školenia: text vľavo, objednávka vpravo */
 .isat-web .training{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:start}
@@ -490,7 +508,7 @@ body{margin:0}
   .isat-web .nav,.isat-web .hdr-right{display:none}
   /* mobilné menu sa umiestňuje pod riadok s logom, nie pod kontaktnú lištu */
   .isat-web .hdr > .wrap{display:flex;position:relative}
-  .isat-web .menu-toggle:checked ~ .nav{display:flex;flex-direction:column;align-items:stretch;position:absolute;left:0;right:0;top:88px;background:#fff;padding:12px 24px 20px;box-shadow:0 20px 30px rgba(11,35,80,.12);max-height:calc(100vh - 140px);overflow-y:auto}
+  .isat-web .menu-toggle:checked ~ .nav{display:flex;flex-direction:column;align-items:stretch;position:absolute;max-height:calc(100vh - 88px);overflow-y:auto;left:0;right:0;top:88px;background:#fff;padding:12px 24px 20px;box-shadow:0 20px 30px rgba(11,35,80,.12);max-height:calc(100vh - 140px);overflow-y:auto}
   .isat-web .menu-toggle:checked ~ .nav .mob-only{display:block}
   .isat-web .sub,.isat-web .nav>li:hover .sub-wide,.isat-web .nav>li:focus-within .sub-wide{position:static;display:block;min-width:0;border:0;box-shadow:none;padding:0 0 0 14px}
   .isat-web .sub small{display:none}
