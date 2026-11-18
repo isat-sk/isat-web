@@ -375,7 +375,7 @@ body{margin:0}
   .isat-web .prax-zelena.prax-foto.prax-tmavomodra{background:linear-gradient(180deg,rgba(8,36,84,.94) 0%,rgba(8,36,84,.9) 100%),var(--foto) 50% 40% / cover no-repeat,#082454}
 }
 /* karty funkcií so skráteným opisom a tlačidlom Viac (funguje aj bez JS) */
-.isat-web .funkcie-viac{align-items:flex-start}
+.isat-web .services:has(.viac){align-items:flex-start}
 .isat-web .viac{margin-top:12px}
 .isat-web .viac summary{display:inline-flex;align-items:center;gap:6px;padding:6px 0;color:var(--blue);font-weight:600;font-size:16px;cursor:pointer;list-style:none}
 .isat-web .viac summary::-webkit-details-marker{display:none}
@@ -386,6 +386,7 @@ body{margin:0}
 .isat-web .viac .viac-zatv,.isat-web .viac[open] .viac-otv{display:none}
 .isat-web .viac[open] .viac-zatv{display:inline}
 .isat-web .viac p{margin-top:4px}
+.isat-web .viac .kroky{margin-top:8px}
 .isat-web .svc:has(.viac[open]) .kratko{display:none}
 .isat-web .svc:has(.viac[open]) .viac{display:flex;flex-direction:column-reverse;margin-top:10px}
 .isat-web .svc:has(.viac[open]) .viac summary{align-self:flex-start}
