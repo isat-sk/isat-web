@@ -305,6 +305,58 @@ body{margin:0}
 .isat-web .pravne ul{margin:14px 0 0;padding-left:22px;font-size:17px;color:var(--text)}
 .isat-web .pravne li{margin-top:10px}
 .isat-web .pravne a{color:var(--blue);text-decoration:underline}
+/* stránka AgroCont: výhody, funkcie a zelená sekcia V praxi */
+.isat-web .vyhody-h{margin:56px 0 0;font-size:clamp(26px,2.6vw,34px)}
+.isat-web .wrap > .vyhody-h:first-child{margin-top:0}
+.isat-web .vyhody{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:28px 56px;margin:32px 0 0;padding:0;list-style:none}
+.isat-web .vyhody li{display:flex;gap:16px;align-items:flex-start}
+.isat-web .vyhoda-ic{display:flex;align-items:center;justify-content:center;flex-shrink:0;width:38px;height:38px;border-radius:50%;background:var(--navy-2);color:#fff;box-shadow:0 6px 14px rgba(10,58,140,.25)}
+.isat-web .vyhoda-ic svg.ic{width:20px;height:20px;stroke-width:2.4}
+.isat-web .vyhody b{display:block;font-size:19px;line-height:1.3;color:var(--navy)}
+.isat-web .vyhody li span:not(.vyhoda-ic){display:block;margin-top:4px;color:var(--text);font-size:16.5px}
+/* moduly s vlastnou fotkou: v hlavičke s prechodom a v pozadí sekcie V praxi */
+.isat-web .foto-agrocont{--foto:url(../img/agrocont-pole.webp)}
+.isat-web .foto-vykazy-prac{--foto:url(../img/vykazy-zber.webp)}
+.isat-web .page-hero.s-fotkou{background:linear-gradient(90deg,#F3F6FB 0%,#F3F6FB 42%,rgba(243,246,251,.75) 58%,rgba(243,246,251,0) 82%),var(--foto) right 62% / cover no-repeat,#F3F6FB}
+.isat-web .prax-zelena.prax-foto{background:linear-gradient(90deg,rgba(236,246,234,.97) 0%,rgba(236,246,234,.9) 40%,rgba(226,241,222,.7) 100%),var(--foto) center 55% / cover no-repeat,#ECF6EA}
+@media (max-width:640px){
+  .isat-web .page-hero.s-fotkou{background:linear-gradient(180deg,rgba(243,246,251,.95) 0%,rgba(243,246,251,.86) 100%),var(--foto) 60% 50% / cover no-repeat,#F3F6FB}
+  .isat-web .prax-zelena.prax-foto{background:linear-gradient(180deg,rgba(236,246,234,.95) 0%,rgba(236,246,234,.9) 100%),var(--foto) 60% 50% / cover no-repeat,#ECF6EA}
+}
+/* hnedá sekcia V praxi (Výkazy prác) */
+.isat-web .prax-hneda{--foto:url(../img/vykazy-zber.webp)}
+.isat-web .prax-zelena.prax-foto.prax-hneda{background:linear-gradient(90deg,rgba(246,239,229,.97) 0%,rgba(246,239,229,.9) 40%,rgba(238,226,209,.68) 100%),var(--foto) center 45% / cover no-repeat,#F6EFE5;border-color:#E6D7C2}
+.isat-web .prax-hneda .eyebrow{color:#7A4E24}
+.isat-web .prax-hneda .prax-body li{border-color:#E6D7C2}
+.isat-web .prax-hneda .prax-body svg.ic{color:#8B5A2B}
+@media (max-width:640px){
+  .isat-web .prax-zelena.prax-foto.prax-hneda{background:linear-gradient(180deg,rgba(246,239,229,.95) 0%,rgba(246,239,229,.9) 100%),var(--foto) 60% 50% / cover no-repeat,#F6EFE5}
+}
+
+/* žltá sekcia V praxi (El.VÁHA) */
+.isat-web .foto-el-vaha,.isat-web .prax-zlta{--foto:url(../img/elvaha-zrno.webp)}
+.isat-web .prax-zelena.prax-foto.prax-zlta{background:linear-gradient(90deg,rgba(252,246,226,.97) 0%,rgba(252,246,226,.9) 40%,rgba(248,236,200,.68) 100%),var(--foto) center 50% / cover no-repeat,#FCF6E2;border-color:#EFE0B2}
+.isat-web .prax-zlta .eyebrow{color:#6E5300}
+.isat-web .prax-zlta .prax-body li{border-color:#EFE0B2}
+.isat-web .prax-zlta .prax-body svg.ic{color:#A67C00}
+@media (max-width:640px){
+  .isat-web .prax-zelena.prax-foto.prax-zlta{background:linear-gradient(180deg,rgba(252,246,226,.95) 0%,rgba(252,246,226,.9) 100%),var(--foto) 40% 50% / cover no-repeat,#FCF6E2}
+}
+
+.isat-web .vyhody-h + .services{margin-top:24px}
+.isat-web .funkcie-ac{justify-content:flex-start}
+.isat-web .funkcie-ac .svc-h{font-size:20px}
+.isat-web .svc-h a{color:inherit;text-decoration:underline;text-decoration-color:#BFD3F2;text-underline-offset:4px}
+.isat-web .svc-h a:hover{color:var(--blue)}
+.isat-web .prax-zelena{--prax-obrazok:none;background:linear-gradient(135deg,rgba(236,246,234,.97) 0%,rgba(226,241,222,.94) 100%),var(--prax-obrazok) center / cover no-repeat,#ECF6EA;border-top:1px solid #D3E8CD;border-bottom:1px solid #D3E8CD}
+.isat-web .prax-zelena .eyebrow{color:#2E6B34}
+.isat-web .prax-in{display:flex;flex-wrap:wrap;gap:32px 56px;align-items:flex-start}
+.isat-web .prax-uvod{flex:1 1 360px}
+.isat-web .prax-uvod .lead{margin-top:12px}
+.isat-web .prax-body{flex:1.4 1 480px;display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.isat-web .prax-body li{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.75);border:1px solid #D3E8CD;color:var(--text);font-size:16.5px}
+.isat-web .prax-body b{color:var(--ink)}
+.isat-web .prax-body svg.ic{flex-shrink:0;width:22px;height:22px;margin-top:2px;color:#2E7D3A}
 
 /* školenia: text vľavo, objednávka vpravo */
 .isat-web .training{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:start}
