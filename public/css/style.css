@@ -325,7 +325,7 @@ body{margin:0}
 }
 /* hnedá sekcia V praxi (Výkazy prác) */
 .isat-web .prax-hneda{--foto:url(../img/vykazy-zber.webp)}
-.isat-web .prax-zelena.prax-foto.prax-hneda{background:linear-gradient(90deg,rgba(246,239,229,.97) 0%,rgba(246,239,229,.9) 40%,rgba(238,226,209,.68) 100%),var(--foto) center 60% / cover no-repeat,#F6EFE5;border-color:#E6D7C2}
+.isat-web .prax-zelena.prax-foto.prax-hneda{background:linear-gradient(90deg,rgba(246,239,229,.97) 0%,rgba(246,239,229,.9) 40%,rgba(238,226,209,.68) 100%),var(--foto) center 45% / cover no-repeat,#F6EFE5;border-color:#E6D7C2}
 .isat-web .prax-hneda .eyebrow{color:#7A4E24}
 .isat-web .prax-hneda .prax-body li{border-color:#E6D7C2}
 .isat-web .prax-hneda .prax-body svg.ic{color:#8B5A2B}
