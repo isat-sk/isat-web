@@ -448,7 +448,7 @@ body{margin:0}
 
 /* ---------- Podstránky modulov ---------- */
 /* hlavička podstránok: svetlé pozadie, vpravo jemná fotka poľa, dole modrá linka */
-.isat-web .page-hero{position:relative;padding:40px 0 56px;background:linear-gradient(90deg,#F3F6FB 0%,#F3F6FB 50%,rgba(243,246,251,.85) 64%,rgba(243,246,251,.2) 100%),url(../img/uvod-video.webp) right 30% / cover no-repeat,#F3F6FB}
+.isat-web .page-hero{position:relative;padding:40px 0 56px;background:#F3F6FB}
 .isat-web .page-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--navy-2),#4F97F0 45%,rgba(79,151,240,0))}
 .isat-web .crumbs{font-size:14px;color:var(--muted)}
 .isat-web .crumbs ol{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
@@ -467,6 +467,13 @@ body{margin:0}
 .isat-web .page-hero.s-fotkou.foto-skolenia > .wrap,.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat > .wrap{position:relative;z-index:1}
 @media (max-width:640px){
   .isat-web .page-hero.s-fotkou.foto-skolenia::before,.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat::before{width:100%;opacity:.12;-webkit-mask-image:none;mask-image:none}
+}
+/* predvolená fotka v hlavičke podstránok bez vlastnej fotky (tablet v poli), s jemným prechodom do farby */
+.isat-web .page-hero:not(.s-fotkou){background:#F3F6FB;overflow:hidden}
+.isat-web .page-hero:not(.s-fotkou)::before{content:"";position:absolute;top:0;right:0;bottom:0;width:min(62%,900px);background:url(../img/podstranky-tablet.webp) 50% 85% / cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,transparent 6%,rgba(0,0,0,.3) 26%,#000 60%);mask-image:linear-gradient(90deg,transparent 0%,transparent 6%,rgba(0,0,0,.3) 26%,#000 60%);pointer-events:none}
+.isat-web .page-hero:not(.s-fotkou) > .wrap{position:relative;z-index:1}
+@media (max-width:640px){
+  .isat-web .page-hero:not(.s-fotkou)::before{width:100%;opacity:.12;-webkit-mask-image:none;mask-image:none}
 }
 .isat-web .features{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:16px;margin:28px 0 0;padding:0;list-style:none}
 .isat-web .features li{display:flex;gap:14px;align-items:flex-start;padding:20px;border:1px solid var(--line);border-radius:16px;font-size:16.5px}
@@ -673,7 +680,6 @@ body{margin:0}
   .isat-web .cta-line b{font-size:18px}
   .isat-web .cta-card .btn{padding:14px 12px;font-size:15px;white-space:nowrap}
   .isat-web .page-hero-in{flex-direction:column;align-items:flex-start;gap:18px}
-  .isat-web .page-hero{background:linear-gradient(180deg,rgba(243,246,251,.96) 0%,rgba(243,246,251,.88) 100%),url(../img/uvod-video.webp) center / cover no-repeat,#F3F6FB}
   .isat-web .page-ic{width:80px;height:80px;border-radius:18px}
   .isat-web .page-ic svg.ic{width:44px;height:44px}
   .isat-web .ftr-top{padding-top:56px}
