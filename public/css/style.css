@@ -333,6 +333,16 @@ body{margin:0}
   .isat-web .prax-zelena.prax-foto.prax-hneda{background:linear-gradient(180deg,rgba(246,239,229,.95) 0%,rgba(246,239,229,.9) 100%),var(--foto) 60% 50% / cover no-repeat,#F6EFE5}
 }
 
+/* žltá sekcia V praxi (El.VÁHA) */
+.isat-web .foto-el-vaha,.isat-web .prax-zlta{--foto:url(../img/elvaha-zrno.webp)}
+.isat-web .prax-zelena.prax-foto.prax-zlta{background:linear-gradient(90deg,rgba(252,246,226,.97) 0%,rgba(252,246,226,.9) 40%,rgba(248,236,200,.68) 100%),var(--foto) center 50% / cover no-repeat,#FCF6E2;border-color:#EFE0B2}
+.isat-web .prax-zlta .eyebrow{color:#6E5300}
+.isat-web .prax-zlta .prax-body li{border-color:#EFE0B2}
+.isat-web .prax-zlta .prax-body svg.ic{color:#A67C00}
+@media (max-width:640px){
+  .isat-web .prax-zelena.prax-foto.prax-zlta{background:linear-gradient(180deg,rgba(252,246,226,.95) 0%,rgba(252,246,226,.9) 100%),var(--foto) 40% 50% / cover no-repeat,#FCF6E2}
+}
+
 .isat-web .vyhody-h + .services{margin-top:24px}
 .isat-web .funkcie-ac{justify-content:flex-start}
 .isat-web .funkcie-ac .svc-h{font-size:20px}
