@@ -317,6 +317,7 @@ body{margin:0}
 /* moduly s vlastnou fotkou: v hlavičke s prechodom a v pozadí sekcie V praxi */
 .isat-web .foto-agrocont{--foto:url(../img/agrocont-pole.webp)}
 .isat-web .foto-vykazy-prac{--foto:url(../img/vykazy-zber.webp)}
+.isat-web .foto-mapy{--foto:url(../img/mapy-pole.webp)}
 .isat-web .page-hero.s-fotkou{background:linear-gradient(90deg,#F3F6FB 0%,#F3F6FB 42%,rgba(243,246,251,.75) 58%,rgba(243,246,251,0) 82%),var(--foto) right 62% / cover no-repeat,#F3F6FB}
 .isat-web .prax-zelena.prax-foto{background:linear-gradient(90deg,rgba(236,246,234,.97) 0%,rgba(236,246,234,.9) 40%,rgba(226,241,222,.7) 100%),var(--foto) center 55% / cover no-repeat,#ECF6EA}
 @media (max-width:640px){
@@ -326,9 +327,9 @@ body{margin:0}
 /* hnedá sekcia V praxi (Výkazy prác) */
 .isat-web .prax-hneda{--foto:url(../img/vykazy-zber.webp)}
 .isat-web .prax-zelena.prax-foto.prax-hneda{background:linear-gradient(90deg,rgba(246,239,229,.97) 0%,rgba(246,239,229,.9) 40%,rgba(238,226,209,.68) 100%),var(--foto) center 45% / cover no-repeat,#F6EFE5;border-color:#E6D7C2}
-.isat-web .prax-hneda .eyebrow{color:#7A4E24}
-.isat-web .prax-hneda .prax-body li{border-color:#E6D7C2}
-.isat-web .prax-hneda .prax-body svg.ic{color:#8B5A2B}
+.isat-web .prax-zelena.prax-hneda .eyebrow{color:#7A4E24}
+.isat-web .prax-zelena.prax-hneda .prax-body li{border-color:#E6D7C2}
+.isat-web .prax-zelena.prax-hneda .prax-body svg.ic{color:#8B5A2B}
 @media (max-width:640px){
   .isat-web .prax-zelena.prax-foto.prax-hneda{background:linear-gradient(180deg,rgba(246,239,229,.95) 0%,rgba(246,239,229,.9) 100%),var(--foto) 60% 50% / cover no-repeat,#F6EFE5}
 }
@@ -336,12 +337,59 @@ body{margin:0}
 /* žltá sekcia V praxi (El.VÁHA) */
 .isat-web .foto-el-vaha,.isat-web .prax-zlta{--foto:url(../img/elvaha-zrno.webp)}
 .isat-web .prax-zelena.prax-foto.prax-zlta{background:linear-gradient(90deg,rgba(252,246,226,.97) 0%,rgba(252,246,226,.9) 40%,rgba(248,236,200,.68) 100%),var(--foto) center 50% / cover no-repeat,#FCF6E2;border-color:#EFE0B2}
-.isat-web .prax-zlta .eyebrow{color:#6E5300}
-.isat-web .prax-zlta .prax-body li{border-color:#EFE0B2}
-.isat-web .prax-zlta .prax-body svg.ic{color:#A67C00}
+.isat-web .prax-zelena.prax-zlta .eyebrow{color:#6E5300}
+.isat-web .prax-zelena.prax-zlta .prax-body li{border-color:#EFE0B2}
+.isat-web .prax-zelena.prax-zlta .prax-body svg.ic{color:#A67C00}
 @media (max-width:640px){
   .isat-web .prax-zelena.prax-foto.prax-zlta{background:linear-gradient(180deg,rgba(252,246,226,.95) 0%,rgba(252,246,226,.9) 100%),var(--foto) 40% 50% / cover no-repeat,#FCF6E2}
 }
+/* modrá sekcia V praxi (Dochádzka) */
+.isat-web .foto-dochadzka,.isat-web .prax-modra{--foto:url(../img/dochadzka-pole.webp)}
+.isat-web .page-hero.s-fotkou.foto-dochadzka{background-position:0 0,right top}
+.isat-web .prax-zelena.prax-foto.prax-modra{background:linear-gradient(90deg,rgba(231,239,250,.97) 0%,rgba(231,239,250,.9) 40%,rgba(214,228,247,.7) 100%),var(--foto) center top / cover no-repeat,#E7EFFA;border-color:#C9D9F0}
+.isat-web .prax-zelena.prax-modra .eyebrow{color:var(--navy-2)}
+.isat-web .prax-zelena.prax-modra .prax-body li{border-color:#C9D9F0}
+.isat-web .prax-zelena.prax-modra .prax-body svg.ic{color:var(--navy-2)}
+@media (max-width:640px){
+  .isat-web .prax-zelena.prax-foto.prax-modra{background:linear-gradient(180deg,rgba(231,239,250,.95) 0%,rgba(231,239,250,.9) 100%),var(--foto) 70% top / cover no-repeat,#E7EFFA}
+}
+/* tmavšia zelená sekcia V praxi (MAPY) */
+.isat-web .prax-zelena.prax-foto.prax-tmavozelena{background:linear-gradient(90deg,rgba(198,223,187,.97) 0%,rgba(198,223,187,.9) 40%,rgba(178,210,165,.75) 100%),var(--foto) center 60% / cover no-repeat,#C6DFBB;border-color:#A2C794}
+.isat-web .prax-zelena.prax-tmavozelena .eyebrow{color:#245A2A}
+.isat-web .prax-zelena.prax-tmavozelena .prax-body li{border-color:#A2C794}
+.isat-web .prax-zelena.prax-tmavozelena .prax-body svg.ic{color:#2E6B34}
+@media (max-width:640px){
+  .isat-web .prax-zelena.prax-foto.prax-tmavozelena{background:linear-gradient(180deg,rgba(198,223,187,.95) 0%,rgba(198,223,187,.9) 100%),var(--foto) 50% 60% / cover no-repeat,#C6DFBB}
+}
+/* tmavomodrá sekcia V praxi (Evidencia zvierat) */
+.isat-web .foto-evidencia-zvierat{--foto:url(../img/zvierata-kravy.webp)}
+.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat{background-size:auto,auto 200%;background-position:0 0,right 52%}
+@media (max-width:640px){.isat-web .page-hero.s-fotkou.foto-evidencia-zvierat{background-size:auto,cover;background-position:0 0,50% 40%}}
+.isat-web .prax-zelena.prax-foto.prax-tmavomodra{background:linear-gradient(90deg,rgba(8,36,84,.96) 0%,rgba(8,36,84,.88) 40%,rgba(10,58,140,.62) 100%),var(--foto) center 40% / cover no-repeat,#082454;border-color:#082454}
+.isat-web .prax-zelena.prax-tmavomodra .eyebrow{color:#9CC3FF}
+.isat-web .prax-zelena.prax-tmavomodra h2{color:#fff}
+.isat-web .prax-zelena.prax-tmavomodra .prax-uvod .lead{color:#D6E2F5}
+.isat-web .prax-zelena.prax-tmavomodra .prax-body li{background:rgba(255,255,255,.94);border-color:rgba(255,255,255,.3)}
+.isat-web .prax-zelena.prax-tmavomodra .prax-body svg.ic{color:var(--navy-2)}
+@media (max-width:640px){
+  .isat-web .prax-zelena.prax-foto.prax-tmavomodra{background:linear-gradient(180deg,rgba(8,36,84,.94) 0%,rgba(8,36,84,.9) 100%),var(--foto) 50% 40% / cover no-repeat,#082454}
+}
+/* karty funkcií so skráteným opisom a tlačidlom Viac (funguje aj bez JS) */
+.isat-web .services:has(.viac){align-items:flex-start}
+.isat-web .viac{margin-top:12px}
+.isat-web .viac summary{display:inline-flex;align-items:center;gap:6px;padding:6px 0;color:var(--blue);font-weight:600;font-size:16px;cursor:pointer;list-style:none}
+.isat-web .viac summary::-webkit-details-marker{display:none}
+.isat-web .viac summary:hover{text-decoration:underline;text-underline-offset:4px}
+.isat-web .viac summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.isat-web .viac summary svg.ic{width:16px;height:16px;transition:transform .2s}
+.isat-web .viac[open] summary svg.ic{transform:rotate(180deg)}
+.isat-web .viac .viac-zatv,.isat-web .viac[open] .viac-otv{display:none}
+.isat-web .viac[open] .viac-zatv{display:inline}
+.isat-web .viac p{margin-top:4px}
+.isat-web .viac .kroky{margin-top:8px}
+.isat-web .svc:has(.viac[open]) .kratko{display:none}
+.isat-web .svc:has(.viac[open]) .viac{display:flex;flex-direction:column-reverse;margin-top:10px}
+.isat-web .svc:has(.viac[open]) .viac summary{align-self:flex-start}
 
 .isat-web .vyhody-h + .services{margin-top:24px}
 .isat-web .funkcie-ac{justify-content:flex-start}
