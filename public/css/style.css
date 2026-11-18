@@ -316,7 +316,7 @@ body{margin:0}
 .isat-web .vyhody li span:not(.vyhoda-ic){display:block;margin-top:4px;color:var(--text);font-size:16.5px}
 /* moduly s vlastnou fotkou: v hlavičke s prechodom a v pozadí sekcie V praxi */
 .isat-web .foto-agrocont{--foto:url(../img/agrocont-pole.webp)}
-.isat-web .foto-vykazy-prac{--foto:url(../img/vykazy-pole.webp)}
+.isat-web .foto-vykazy-prac{--foto:url(../img/vykazy-zber.webp)}
 .isat-web .page-hero.s-fotkou{background:linear-gradient(90deg,#F3F6FB 0%,#F3F6FB 42%,rgba(243,246,251,.75) 58%,rgba(243,246,251,0) 82%),var(--foto) right 62% / cover no-repeat,#F3F6FB}
 .isat-web .prax-zelena.prax-foto{background:linear-gradient(90deg,rgba(236,246,234,.97) 0%,rgba(236,246,234,.9) 40%,rgba(226,241,222,.7) 100%),var(--foto) center 55% / cover no-repeat,#ECF6EA}
 @media (max-width:640px){
