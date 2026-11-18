@@ -344,13 +344,13 @@ body{margin:0}
 }
 /* modrá sekcia V praxi (Dochádzka) */
 .isat-web .foto-dochadzka,.isat-web .prax-modra{--foto:url(../img/dochadzka-pole.webp)}
-.isat-web .page-hero.s-fotkou.foto-dochadzka{background-position:0 0,right 22%}
-.isat-web .prax-zelena.prax-foto.prax-modra{background:linear-gradient(90deg,rgba(231,239,250,.97) 0%,rgba(231,239,250,.9) 40%,rgba(214,228,247,.7) 100%),var(--foto) center 40% / cover no-repeat,#E7EFFA;border-color:#C9D9F0}
+.isat-web .page-hero.s-fotkou.foto-dochadzka{background-position:0 0,right top}
+.isat-web .prax-zelena.prax-foto.prax-modra{background:linear-gradient(90deg,rgba(231,239,250,.97) 0%,rgba(231,239,250,.9) 40%,rgba(214,228,247,.7) 100%),var(--foto) center top / cover no-repeat,#E7EFFA;border-color:#C9D9F0}
 .isat-web .prax-zelena.prax-modra .eyebrow{color:var(--navy-2)}
 .isat-web .prax-zelena.prax-modra .prax-body li{border-color:#C9D9F0}
 .isat-web .prax-zelena.prax-modra .prax-body svg.ic{color:var(--navy-2)}
 @media (max-width:640px){
-  .isat-web .prax-zelena.prax-foto.prax-modra{background:linear-gradient(180deg,rgba(231,239,250,.95) 0%,rgba(231,239,250,.9) 100%),var(--foto) 70% 50% / cover no-repeat,#E7EFFA}
+  .isat-web .prax-zelena.prax-foto.prax-modra{background:linear-gradient(180deg,rgba(231,239,250,.95) 0%,rgba(231,239,250,.9) 100%),var(--foto) 70% top / cover no-repeat,#E7EFFA}
 }
 
 .isat-web .vyhody-h + .services{margin-top:24px}
