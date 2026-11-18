@@ -317,6 +317,7 @@ body{margin:0}
 /* moduly s vlastnou fotkou: v hlavičke s prechodom a v pozadí sekcie V praxi */
 .isat-web .foto-agrocont{--foto:url(../img/agrocont-pole.webp)}
 .isat-web .foto-vykazy-prac{--foto:url(../img/vykazy-zber.webp)}
+.isat-web .foto-mapy{--foto:url(../img/mapy-pole.webp)}
 .isat-web .page-hero.s-fotkou{background:linear-gradient(90deg,#F3F6FB 0%,#F3F6FB 42%,rgba(243,246,251,.75) 58%,rgba(243,246,251,0) 82%),var(--foto) right 62% / cover no-repeat,#F3F6FB}
 .isat-web .prax-zelena.prax-foto{background:linear-gradient(90deg,rgba(236,246,234,.97) 0%,rgba(236,246,234,.9) 40%,rgba(226,241,222,.7) 100%),var(--foto) center 55% / cover no-repeat,#ECF6EA}
 @media (max-width:640px){
@@ -351,6 +352,14 @@ body{margin:0}
 .isat-web .prax-zelena.prax-modra .prax-body svg.ic{color:var(--navy-2)}
 @media (max-width:640px){
   .isat-web .prax-zelena.prax-foto.prax-modra{background:linear-gradient(180deg,rgba(231,239,250,.95) 0%,rgba(231,239,250,.9) 100%),var(--foto) 70% top / cover no-repeat,#E7EFFA}
+}
+/* tmavšia zelená sekcia V praxi (MAPY) */
+.isat-web .prax-zelena.prax-foto.prax-tmavozelena{background:linear-gradient(90deg,rgba(198,223,187,.97) 0%,rgba(198,223,187,.9) 40%,rgba(178,210,165,.75) 100%),var(--foto) center 60% / cover no-repeat,#C6DFBB;border-color:#A2C794}
+.isat-web .prax-zelena.prax-tmavozelena .eyebrow{color:#245A2A}
+.isat-web .prax-zelena.prax-tmavozelena .prax-body li{border-color:#A2C794}
+.isat-web .prax-zelena.prax-tmavozelena .prax-body svg.ic{color:#2E6B34}
+@media (max-width:640px){
+  .isat-web .prax-zelena.prax-foto.prax-tmavozelena{background:linear-gradient(180deg,rgba(198,223,187,.95) 0%,rgba(198,223,187,.9) 100%),var(--foto) 50% 60% / cover no-repeat,#C6DFBB}
 }
 
 .isat-web .vyhody-h + .services{margin-top:24px}
